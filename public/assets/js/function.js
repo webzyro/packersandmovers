@@ -128,13 +128,13 @@
             });
             tl.from(container, 1, {
                 xPercent: -100,
-                ease: Power2.out
+                ease: "power2.out"
             });
             tl.from(image, 1, {
                 xPercent: 100,
                 scale: 1,
                 delay: -1,
-                ease: Power2.out
+                ease: "power2.out"
             });
         });
     }
@@ -218,12 +218,10 @@
 	var $parallaxie = $('.parallaxie');
 	if($parallaxie.length && ($window.width() > 991))
 	{
-		if ($window.width() > 768) {
-			$parallaxie.parallaxie({
-				speed: 0.55,
-				offset: 0,
-			});
-		}
+		$parallaxie.parallaxie({
+			speed: 0.55,
+			offset: 0,
+		});
 	}
 
 	/* Zoom Gallery screenshot */
@@ -267,11 +265,11 @@
 				if (text === "success"){
 					formSuccess();
 				} else {
-					submitMSG(false,text);
+					submitMSG(false, text, "#contactMsgSubmit");
 				}
 			},
 			error: function (jqXHR, textStatus, errorThrown) {
-				submitMSG(false, "Request failed: " + (errorThrown || textStatus));
+				submitMSG(false, "Request failed: " + (errorThrown || textStatus), "#contactMsgSubmit");
 				console.error("submitForm AJAX error", jqXHR, textStatus, errorThrown);
 			}
 		});
@@ -279,16 +277,16 @@
 
 	function formSuccess(){
 		$contactform[0].reset();
-		submitMSG(true, "Message Sent Successfully!")
+		submitMSG(true, "Message Sent Successfully!", "#contactMsgSubmit")
 	}
 
-	function submitMSG(valid, msg){
+	function submitMSG(valid, msg, targetSelector){
 		if(valid){
 			var msgClasses = "h4 text-success";
 		} else {
 			var msgClasses = "h4 text-danger";
 		}
-		$("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+		$(targetSelector).removeClass().addClass(msgClasses).text(msg);
 	}
 	/* Contact form validation end */
 
@@ -311,11 +309,11 @@
 				if (text === "success"){
 					appointmentformSuccess();
 				} else {
-					appointmentsubmitMSG(false,text);
+					appointmentsubmitMSG(false, text, "#appointmentMsgSubmit");
 				}
 			},
 			error: function (jqXHR, textStatus, errorThrown) {
-				appointmentsubmitMSG(false, "Request failed: " + (errorThrown || textStatus));
+				appointmentsubmitMSG(false, "Request failed: " + (errorThrown || textStatus), "#appointmentMsgSubmit");
 				console.error("submitappointmentForm AJAX error", jqXHR, textStatus, errorThrown);
 			}
 		});
@@ -323,16 +321,16 @@
 
 	function appointmentformSuccess(){
 		$requestquoteForm[0].reset();
-		appointmentsubmitMSG(true, "Message Sent Successfully!")
+		appointmentsubmitMSG(true, "Message Sent Successfully!", "#appointmentMsgSubmit")
 	}
 
-	function appointmentsubmitMSG(valid, msg){
+	function appointmentsubmitMSG(valid, msg, targetSelector){
 		if(valid){
 			var msgClasses = "h3 text-success";
 		} else {
 			var msgClasses = "h3 text-danger";
 		}
-		$("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+		$(targetSelector).removeClass().addClass(msgClasses).text(msg);
 	}
 	/* Appointment form validation end */
 
