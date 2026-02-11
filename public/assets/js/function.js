@@ -42,20 +42,22 @@
 	}
 
 	/* Hero Slider Layout JS */
-	const hero_slider_layout = new Swiper('.hero-slider-layout .swiper', {
-		effect: 'fade',
-		slidesPerView : 1,
-		speed: 1000,
-		spaceBetween: 0,
-		loop: true,
-		autoplay: {
-			delay: 4000,
-		},
-		pagination: {
-			el: '.hero-pagination',
-			clickable: true,
-		},
-	});
+	if ($('.hero-slider-layout').length) {
+		const hero_slider_layout = new Swiper('.hero-slider-layout .swiper', {
+			effect: 'fade',
+			slidesPerView : 1,
+			speed: 1000,
+			spaceBetween: 0,
+			loop: true,
+			autoplay: {
+				delay: 4000,
+			},
+			pagination: {
+				el: '.hero-pagination',
+				clickable: true,
+			},
+		});
+	}
 
 	/* testimonial Slider JS */
 	if ($('.testimonial-slider').length) {
@@ -267,6 +269,10 @@
 				} else {
 					submitMSG(false,text);
 				}
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				submitMSG(false, "Request failed: " + (errorThrown || textStatus));
+				console.error("submitForm AJAX error", jqXHR, textStatus, errorThrown);
 			}
 		});
 	}
@@ -307,12 +313,16 @@
 				} else {
 					appointmentsubmitMSG(false,text);
 				}
+			},
+			error: function (jqXHR, textStatus, errorThrown) {
+				appointmentsubmitMSG(false, "Request failed: " + (errorThrown || textStatus));
+				console.error("submitappointmentForm AJAX error", jqXHR, textStatus, errorThrown);
 			}
 		});
 	}
 
 	function appointmentformSuccess(){
-		$appointmentForm[0].reset();
+		$requestquoteForm[0].reset();
 		appointmentsubmitMSG(true, "Message Sent Successfully!")
 	}
 

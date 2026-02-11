@@ -1,4 +1,4 @@
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Custom Cursor Styles */
 .cb-cursor {
 	position: fixed;
 	top: 0;
@@ -132,7 +132,7 @@
 .cb-cursor.-text:before {
 	background: #000;
 	opacity: 0.80;
-	backdrop-filter: blur(10);
+	backdrop-filter: blur(10px);
 	-webkit-transform: scale(1.7);
 	-moz-transform: scale(1.7);
 	-ms-transform: scale(1.7);
