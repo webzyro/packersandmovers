@@ -1,5 +1,5 @@
 <x-layout>
-    <x-breadcrumb />
+    <x-breadcrumb title="About us" />
     <x-about-section />
     <x-approach />
     <x-who-we-are />

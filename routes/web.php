@@ -15,11 +15,11 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::get('/services', function () {
-    return view('services');
+    return view('service.index');
 })->name('services.index');
 
 Route::get('/services/{slug}', function ($slug) {
-    return view('service-single', compact('slug'));
+    return view('service.show', compact('slug'));
 })->name('services.show');
 
 Route::get('/projects', function () {
