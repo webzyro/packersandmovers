@@ -17,7 +17,7 @@
                     </div>
 
                     <div class="contact-us-circle">
-                        <a href="contact.html">
+                        <a href="{{ route('contact') }}">
                             <img src="{{asset('assets/images/contact-us-circle.svg')}}" alt="contact-us-circle">
                         </a>
                     </div>
@@ -93,7 +93,7 @@
 
                     <!-- Our Skill Button Start -->
                     <div class="our-skill-btn wow fadeInUp" data-wow-delay="0.4s">
-                        <a href="contact.html" class="btn-default">book service now</a>
+                        <a href="{{ route('contact') }}" class="btn-default">book service now</a>
                     </div>
                     <!-- Our Skill Button End -->
                 </div>

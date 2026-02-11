@@ -47,7 +47,7 @@
 
                     <!-- About Us Button Start -->
                     <div class="about-us-btn wow fadeInUp" data-wow-delay="0.4s">
-                        <a href="about.html" class="btn-default">more about us</a>
+                        <a href="{{ route('about') }}" class="btn-default">more about us</a>
                     </div>
                     <!-- About Us Button End -->
                 </div>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="about-owner-info-content">
                                 <h3>Aditya Singh</h3>
-                                <p>CEO Website</p>
+                                <p>CEO & Founder</p>
                             </div>
                         </div>
                     </div>

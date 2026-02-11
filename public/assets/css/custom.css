@@ -1400,7 +1400,7 @@ header.main-header .header-sticky.active{
 	background-size: cover;
 }
 
-.wrok-process-list{
+.work-process-list{
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
@@ -2004,14 +2004,14 @@ header.main-header .header-sticky.active{
 	}
 }
 
-.into-video-play-icon{
+.intro-video-play-icon{
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-.into-video-play-icon img{
+.intro-video-play-icon img{
 	max-width: 24px;
 }
 
@@ -5963,7 +5963,7 @@ header.main-header .header-sticky.active{
         max-width: 75px;
     }
 
-	.into-video-play-icon img{
+	.intro-video-play-icon img{
 		max-width: 18px;
 	}
 

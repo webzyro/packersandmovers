@@ -32,12 +32,13 @@
                         </figure>
 
                         <div class="project-btn">
-                            <a href="project-single.html"><img src="{{asset('assets/images/arrow-white.svg')}}"
-                                    alt="arrow-white"></a>
+                            <a href="{{ route('projects.show', ['slug' => 'urban-retreat-relocation']) }}"><img
+                                    src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3><a href="project-single.html">Urban Retreat Relocation</a></h3>
+                        <h3><a href="{{ route('projects.show', ['slug' => 'urban-retreat-relocation']) }}">Urban Retreat
+                                Relocation</a></h3>
                     </div>
                 </div>
                 <!-- Project Item End -->
@@ -52,12 +53,13 @@
                         </figure>
 
                         <div class="project-btn">
-                            <a href="project-single.html"><img src="{{asset('assets/images/arrow-white.svg')}}"
-                                    alt="arrow-white"></a>
+                            <a href="{{ route('projects.show', ['slug' => 'cityscape-transitions']) }}"><img
+                                    src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3><a href="project-single.html">Cityscape Transitions</a></h3>
+                        <h3><a href="{{ route('projects.show', ['slug' => 'cityscape-transitions']) }}">Cityscape
+                                Transitions</a></h3>
                     </div>
                 </div>
                 <!-- Project Item End -->
@@ -72,12 +74,13 @@
                         </figure>
 
                         <div class="project-btn">
-                            <a href="project-single.html"><img src="{{asset('assets/images/arrow-white.svg')}}"
-                                    alt="arrow-white"></a>
+                            <a href="{{ route('projects.show', ['slug' => 'luxury-living-moves']) }}"><img
+                                    src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3><a href="project-single.html">Luxury Living Moves</a></h3>
+                        <h3><a href="{{ route('projects.show', ['slug' => 'luxury-living-moves']) }}">Luxury Living
+                                Moves</a></h3>
                     </div>
                 </div>
                 <!-- Project Item End -->
@@ -92,12 +95,13 @@
                         </figure>
 
                         <div class="project-btn">
-                            <a href="project-single.html"><img src="{{asset('assets/images/arrow-white.svg')}}"
-                                    alt="arrow-white"></a>
+                            <a href="{{ route('projects.show', ['slug' => 'seamless-office-relocation']) }}"><img
+                                    src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3><a href="project-single.html">Seamless Office Relocation</a></h3>
+                        <h3><a href="{{ route('projects.show', ['slug' => 'seamless-office-relocation']) }}">Seamless
+                                Office Relocation</a></h3>
                     </div>
                 </div>
                 <!-- Project Item End -->
@@ -112,12 +116,13 @@
                         </figure>
 
                         <div class="project-btn">
-                            <a href="project-single.html"><img src="{{asset('assets/images/arrow-white.svg')}}"
-                                    alt="arrow-white"></a>
+                            <a href="{{ route('projects.show', ['slug' => 'suburban-dream-shifts']) }}"><img
+                                    src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3><a href="project-single.html">Suburban Dream Shifts</a></h3>
+                        <h3><a href="{{ route('projects.show', ['slug' => 'suburban-dream-shifts']) }}">Suburban Dream
+                                Shifts</a></h3>
                     </div>
                 </div>
                 <!-- Project Item End -->
@@ -132,12 +137,12 @@
                         </figure>
 
                         <div class="project-btn">
-                            <a href="project-single.html"><img src="{{asset('assets/images/arrow-white.svg')}}"
-                                    alt="arrow-white"></a>
+                            <a href="{{ route('projects.show', ['slug' => 'corporate-move']) }}"><img
+                                    src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3><a href="project-single.html">Corporate Move</a></h3>
+                        <h3><a href="{{ route('projects.show', ['slug' => 'corporate-move']) }}">Corporate Move</a></h3>
                     </div>
                 </div>
                 <!-- Project Item End -->
@@ -146,7 +151,7 @@
             <div class="col-lg-12">
                 <!-- Section Footer Button Start -->
                 <div class="section-footer-btn wow fadeInUp" data-wow-delay="1.2s">
-                    <a href="projects.html" class="btn-default">view all projects</a>
+                    <a href="{{ route('projects.index') }}" class="btn-default">view all projects</a>
                 </div>
                 <!-- Section Footer Button End -->
             </div>

@@ -14,7 +14,7 @@
 
         <div class="row">
             <!-- Work Process List Start -->
-            <div class="wrok-process-list">
+            <div class="work-process-list">
                 <!-- Work Process Item Start -->
                 <div class="work-process-item wow fadeInUp">
                     <div class="icon-box">
@@ -70,8 +70,7 @@
                     </div>
                     <div class="work-process-content">
                         <h3>unpack & settle in</h3>
-                        <p>Once we've delivered your items, we'll help with unpacking and setting up, so you can enjoy.
-                        </p>
+                        <p>Once we've delivered your items, we'll help with unpacking and setting up so you can enjoy your new home right away.</p>
                     </div>
                 </div>
                 <!-- Work Process Item End -->

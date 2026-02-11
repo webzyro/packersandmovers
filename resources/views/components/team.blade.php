@@ -18,7 +18,7 @@
                 <div class="team-item wow fadeInUp">
                     <!-- Team Image Start -->
                     <div class="team-image">
-                        <a href="team-single.html" data-cursor-text="View">
+                        <a href="{{ route('team.show', ['slug' => 'kristin-watson']) }}" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="{{asset('assets/images/team-1.jpg')}}" alt="team-1">
                             </figure>
@@ -38,7 +38,7 @@
 
                     <!-- Team Content Start -->
                     <div class="team-content">
-                        <h3><a href="team-single.html">kristin watson</a></h3>
+                        <h3><a href="{{ route('team.show', ['slug' => 'kristin-watson']) }}">kristin watson</a></h3>
                         <p>crane rigger</p>
                     </div>
                     <!-- Team Content End -->
@@ -51,7 +51,7 @@
                 <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
                     <!-- Team Image Start -->
                     <div class="team-image">
-                        <a href="team-single.html" data-cursor-text="View">
+                        <a href="{{ route('team.show', ['slug' => 'darrell-steward']) }}" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="{{asset('assets/images/team-2.jpg')}}" alt="team-2">
                             </figure>
@@ -71,7 +71,7 @@
 
                     <!-- Team Content Start -->
                     <div class="team-content">
-                        <h3><a href="team-single.html">darrell steward</a></h3>
+                        <h3><a href="{{ route('team.show', ['slug' => 'darrell-steward']) }}">darrell steward</a></h3>
                         <p>landscaping supervisor</p>
                     </div>
                     <!-- Team Content End -->
@@ -84,7 +84,7 @@
                 <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
                     <!-- Team Image Start -->
                     <div class="team-image">
-                        <a href="team-single.html" data-cursor-text="View">
+                        <a href="{{ route('team.show', ['slug' => 'floyd-miles']) }}" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="{{asset('assets/images/team-3.jpg')}}" alt="team-3">
                             </figure>
@@ -104,7 +104,7 @@
 
                     <!-- Team Content Start -->
                     <div class="team-content">
-                        <h3><a href="team-single.html">floyd miles</a></h3>
+                        <h3><a href="{{ route('team.show', ['slug' => 'floyd-miles']) }}">floyd miles</a></h3>
                         <p>estimator</p>
                     </div>
                     <!-- Team Content End -->
@@ -117,7 +117,7 @@
                 <div class="team-item wow fadeInUp" data-wow-delay="0.6s">
                     <!-- Team Image Start -->
                     <div class="team-image">
-                        <a href="team-single.html" data-cursor-text="View">
+                        <a href="{{ route('team.show', ['slug' => 'brooklyn-simmons']) }}" data-cursor-text="View">
                             <figure class="image-anime">
                                 <img src="{{asset('assets/images/team-4.jpg')}}" alt="team-4">
                             </figure>
@@ -137,7 +137,7 @@
 
                     <!-- Team Content Start -->
                     <div class="team-content">
-                        <h3><a href="team-single.html">brooklyn simmons</a></h3>
+                        <h3><a href="{{ route('team.show', ['slug' => 'brooklyn-simmons']) }}">brooklyn simmons</a></h3>
                         <p>concrete inspector</p>
                     </div>
                     <!-- Team Content End -->

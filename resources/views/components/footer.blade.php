@@ -28,11 +28,11 @@
                 <div class="footer-links">
                     <h3>quick link</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="services.html">our services</a></li>
-                        <li><a href="projects.html">Latest projects</a></li>
-                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('about') }}">About us</a></li>
+                        <li><a href="{{ route('services.index') }}">our services</a></li>
+                        <li><a href="{{ route('projects.index') }}">Latest projects</a></li>
+                        <li><a href="{{ route('contact') }}">Contact us</a></li>
                     </ul>
                 </div>
                 <!-- Footer Links End -->

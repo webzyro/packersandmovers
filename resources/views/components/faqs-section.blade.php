@@ -44,8 +44,10 @@
                                 <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
                                     data-bs-parent="#faqaccordion">
                                     <div class="accordion-body">
-                                        <p>We recommend booking your move at least 2-4 weeks in advance to ensure
-                                            availability, especially during peak seasons.</p>
+                                        <p>Yes, we provide a complete range of packing materials including sturdy boxes,
+                                            bubble wrap, packing tape, and specialized materials for fragile items. We
+                                            also offer custom crating for valuable or delicate belongings to ensure
+                                            maximum protection during transit.</p>
                                     </div>
                                 </div>
                             </div>
@@ -62,8 +64,11 @@
                                 <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
                                     data-bs-parent="#faqaccordion">
                                     <div class="accordion-body">
-                                        <p>We recommend booking your move at least 2-4 weeks in advance to ensure
-                                            availability, especially during peak seasons.</p>
+                                        <p>Yes, we offer comprehensive insurance coverage options to protect your
+                                            belongings. Our basic valuation is included, and additional full-value
+                                            protection is available. In case of damage or loss, simply file a claim
+                                            within 30 days with our customer service team, and we'll process it
+                                            promptly.</p>
                                     </div>
                                 </div>
                             </div>
@@ -80,8 +85,10 @@
                                 <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
                                     data-bs-parent="#faqaccordion">
                                     <div class="accordion-body">
-                                        <p>We recommend booking your move at least 2-4 weeks in advance to ensure
-                                            availability, especially during peak seasons.</p>
+                                        <p>Absolutely! We provide long-distance moving services across the country with
+                                            no distance limits. Pricing varies based on distance, volume, and specific
+                                            requirements. We recommend booking 4-6 weeks in advance for interstate moves
+                                            to ensure optimal scheduling and competitive rates.</p>
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +117,7 @@
                                 <img src="{{asset('assets/images/intro-video-circle.svg')}}" alt="intro-video-circle">
                             </figure>
 
-                            <div class="into-video-play-icon">
+                            <div class="intro-video-play-icon">
                                 <img src="{{asset('assets/images/intro-video-play-btn.svg')}}"
                                     alt="intro-video-play-btn">
                             </div>

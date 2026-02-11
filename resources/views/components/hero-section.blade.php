@@ -56,7 +56,7 @@
 
                         <!-- Hero Button Start -->
                         <div class="hero-btn wow fadeInUp" data-wow-delay="0.2s">
-                            <a href="contact.html" class="btn-default btn-highlighted">Request a Quote</a>
+                            <a href="{{ route('contact') }}" class="btn-default btn-highlighted">Request a Quote</a>
                         </div>
                         <!-- Hero Button End -->
                     </div>
