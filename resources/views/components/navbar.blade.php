@@ -12,8 +12,8 @@
                 <div class="collapse navbar-collapse main-menu">
                     <div class="nav-menu-wrapper">
                         <ul class="navbar-nav mr-auto" id="menu">
-                            <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('about') }}">About Us</a></li>
                             <li class="nav-item submenu">
                                 <a class="nav-link" href="{{ route('services.index') }}">Services</a>
                                 <ul>
