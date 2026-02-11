@@ -10,7 +10,9 @@
                     <nav class="wow fadeInUp">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">home</a></li>
-                            <i class="fa-solid fa-arrow-right-from-bracket ms-2 text-white"></i>
+                            <li class="ms-2">
+                                <i class="fa-solid fa-arrow-right-from-bracket text-white"></i>
+                            </li>
                             <li class="ms-2 text-capitalize text-white">{{ $title }}</li>
                         </ol>
                     </nav>

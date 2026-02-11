@@ -40,7 +40,7 @@
 
                             <!-- Sidebar CTA Button Start -->
                             <div class="sidebar-cta-btn">
-                                <a href="tel:+112345678"><img src="{{ asset('assets/images/icon-phone.svg') }}"
+                                <a href="tel:+919546988569"><img src="{{ asset('assets/images/icon-phone.svg') }}"
                                         alt="">+91 9546988569</a>
                             </div>
                             <!-- Sidebar CTA Button End -->
@@ -148,7 +148,7 @@
                                             </div>
                                             <div class="service-solution-step-content">
                                                 <h3>Feedback & continuous improvement</h3>
-                                                <p>We value your feedback and continuously refined our services to
+                                                <p>We value your feedback and continuously refine our services to
                                                     provide you with the best possible moving experience, tailored to
                                                     your needs.</p>
                                             </div>
