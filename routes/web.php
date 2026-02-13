@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,9 +15,7 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
-Route::get('/services', function () {
-    return view('service.index');
-})->name('services.index');
+Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 
 Route::get('/services/{slug}', function ($slug) {
     return view('service.show', compact('slug'));
