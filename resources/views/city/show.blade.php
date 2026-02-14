@@ -51,7 +51,7 @@
 
                 <div class="col-lg-8">
                     <!-- Service Single Content Start -->
-                    <div class="service-single-contemt">
+                    <div class="service-single-content">
                         <!-- Page Single Image Start -->
                         <div class="page-single-image">
                             <figure class="image-anime reveal">
@@ -282,7 +282,7 @@
 
     @if(!empty($city->schema_markup))
         <script type="application/ld+json">
-                                {!! $city->schema_markup !!}
-                            </script>
+                                    {!! $city->schema_markup !!}
+                                </script>
     @endif
 </x-layout>
