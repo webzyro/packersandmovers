@@ -11,8 +11,9 @@
                         <div class="page-sidebar-catagery-list wow fadeInUp">
                             <h3>services category</h3>
                             <ul>
-                                @foreach ($services as $service)
-                                    <li><a href="{{ route('services.show', $service->slug) }}">{{ $service->title }}</a>
+                                @foreach ($sidebarServices as $sidebarService)
+                                    <li><a
+                                            href="{{ route('services.show', $sidebarService->slug) }}">{{ $sidebarService->title }}</a>
                                     </li>
                                 @endforeach
                             </ul>
