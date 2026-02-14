@@ -75,7 +75,7 @@
                                     <div class="service-solution-step-item wow fadeInUp" data-wow-delay="0.2s">
                                         <div class="service-solution-step-box">
                                             <div class="service-solution-step-no">
-                                                <h2>01</h2>
+                                                <h4>01</h4>
                                             </div>
                                             <div class="service-solution-step-content">
                                                 <h3>Personalized Moving Plans</h3>
@@ -99,7 +99,7 @@
                                     <div class="service-solution-step-item active wow fadeInUp" data-wow-delay="0.4s">
                                         <div class="service-solution-step-box">
                                             <div class="service-solution-step-no">
-                                                <h2>02</h2>
+                                                <h4>02</h4>
                                             </div>
                                             <div class="service-solution-step-content">
                                                 <h3>Connecting you to the right services</h3>
@@ -118,7 +118,7 @@
                                     <div class="service-solution-step-item wow fadeInUp" data-wow-delay="0.6s">
                                         <div class="service-solution-step-box">
                                             <div class="service-solution-step-no">
-                                                <h2>03</h2>
+                                                <h4>03</h4>
                                             </div>
                                             <div class="service-solution-step-content">
                                                 <h3>Feedback & continuous improvement</h3>
@@ -140,7 +140,7 @@
 
                             <!-- Service Secure Box Start -->
                             <div class="service-secure-box">
-                                <h2 class="text-anime-style-2">Moving made <span>simple and secure</span></h2>
+                                <h3 class="text-anime-style-2">Moving made <span>simple and secure</span></h3>
 
                                 <!-- Service Entry Image Content Start -->
                                 <div class="service-entry-image-content">
@@ -243,8 +243,8 @@
                         <div class="page-single-faqs">
                             <!-- Section Title Start -->
                             <div class="section-title">
-                                <h2 class="text-anime-style-2" data-cursor="-opaque">Answers to your <span>moving
-                                        questions</span></h2>
+                                <h3 class="text-anime-style-2" data-cursor="-opaque">Answers to your <span>moving
+                                        questions</span></h3>
                             </div>
                             <!-- Section Title End -->
 
@@ -253,13 +253,13 @@
                                 <!-- FAQ Item Start -->
                                 @foreach ($service->faqs as $faq)
                                     <div class="accordion-item wow fadeInUp">
-                                        <h2 class="accordion-header" id="heading{{ $faq->id }}">
+                                        <h4 class="accordion-header" id="heading{{ $faq->id }}">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#collapse{{ $faq->id }}"
                                                 aria-expanded="false" aria-controls="collapse{{ $faq->id }}">
                                                 {{ $faq->question }}
                                             </button>
-                                        </h2>
+                                        </h4>
                                         <div id="collapse{{ $faq->id }}" class="accordion-collapse collapse"
                                             aria-labelledby="heading{{ $faq->id }}" data-bs-parent="#faqaccordion">
                                             <div class="accordion-body">
@@ -279,4 +279,10 @@
             </div>
         </div>
     </div>
+
+    @if(!empty($service->schema_markup))
+        <script type="application/ld+json">
+                    {!! $service->schema_markup !!}
+                </script>
+    @endif
 </x-layout>
