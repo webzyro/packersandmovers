@@ -15,7 +15,7 @@
                             <div class="service-content">
                                 <h3><a href="{{ route('services.show', $service->slug) }}">{{ $service->title }}</a></h3>
                                 <p>
-                                    {{ Str::limit($service->description, 80) }}
+                                    {{ Str::limit(strip_tags($service->description), 80) }}
                                 </p>
 
                             </div>
