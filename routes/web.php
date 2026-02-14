@@ -16,10 +16,7 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
-
-Route::get('/services/{slug}', function ($slug) {
-    return view('service.show', compact('slug'));
-})->name('services.show');
+Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('services.show');
 
 Route::get('/projects', function () {
     return view('projects');

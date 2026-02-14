@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Service extends Model
 {
@@ -17,4 +18,14 @@ class Service extends Model
         'schema_markup',
         'is_active',
     ];
+
+    protected $casts = [
+        'schema_markup' => 'array',
+        'is_active' => 'boolean',
+    ];
+
+    public function faqs(): HasMany
+    {
+        return $this->hasMany(ServiceFaq::class);
+    }
 }
