@@ -1,5 +1,5 @@
 <x-layout>
-    <x-breadcrumb title="{{ $service->title }}" />
+    <x-breadcrumb title="{{ $city->title }}" />
 
     <div class="page-service-single">
         <div class="container">
@@ -25,7 +25,7 @@
                         <div class="sidebar-cta-box wow fadeInUp" data-wow-delay="0.2s">
                             <!-- Sidebar Cta Logo Start -->
                             <div class="sidebar-cta-logo">
-                                <img src="{{ asset('assets/images/logo.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/logo.svg') }}" alt="Company Logo">
                             </div>
                             <!-- Sidebar Cta Logo End -->
 
@@ -40,7 +40,7 @@
                             <!-- Sidebar CTA Button Start -->
                             <div class="sidebar-cta-btn">
                                 <a href="tel:+919546988569"><img src="{{ asset('assets/images/icon-phone.svg') }}"
-                                        alt="">+91 9546988569</a>
+                                        alt="Phone Icon">+91 9546988569</a>
                             </div>
                             <!-- Sidebar CTA Button End -->
                         </div>
@@ -51,19 +51,19 @@
 
                 <div class="col-lg-8">
                     <!-- Service Single Content Start -->
-                    <div class="service-single-contemt">
+                    <div class="service-single-content">
                         <!-- Page Single Image Start -->
                         <div class="page-single-image">
                             <figure class="image-anime reveal">
-                                <img src="{{ $service->image ? Storage::disk('uploads')->url($service->image) : asset('assets/images/placeholder.jpg') }}"
-                                    alt="{{ $service->title }}">
+                                <img src="{{ $city->image ? Storage::disk('uploads')->url($city->image) : asset('assets/images/placeholder.jpg') }}"
+                                    alt="{{ $city->title }}">
                             </figure>
                         </div>
                         <!-- Page Single Image End -->
 
                         <!-- Service Entry Start -->
                         <div class="service-entry">
-                            {!! $service->description !!}
+                            {!! $city->description !!}
 
 
                             <!-- Service Solution Box Start -->
@@ -89,7 +89,7 @@
                                         </div>
                                         <div class="icon-box">
                                             <img src="{{ asset('assets/images/icon-service-solution-step-1.svg') }}"
-                                                alt="">
+                                                alt="Step 1: Personalized Planning">
                                         </div>
                                     </div>
                                     <!-- Service Entry Step Item Endtart -->
@@ -108,7 +108,7 @@
                                         </div>
                                         <div class="icon-box">
                                             <img src="{{ asset('assets/images/icon-service-solution-step-2.svg') }}"
-                                                alt="">
+                                                alt="Step 2: Connecting with Resources">
                                         </div>
                                     </div>
                                     <!-- Service Entry Step Item Endtart -->
@@ -128,7 +128,7 @@
                                         </div>
                                         <div class="icon-box">
                                             <img src="{{ asset('assets/images/icon-service-solution-step-3.svg') }}"
-                                                alt="">
+                                                alt="Step 3: Feedback & Improvement">
                                         </div>
                                     </div>
                                     <!-- Service Entry Step Item Endtart -->
@@ -146,7 +146,8 @@
                                     <!-- Service Entry Image Start -->
                                     <div class="service-entry-image">
                                         <figure class="image-anime reveal">
-                                            <img src="{{ asset('assets/images/service-entry-image.jpg') }}" alt="">
+                                            <img src="{{ asset('assets/images/service-entry-image.jpg') }}"
+                                                alt="Our team at work">
                                         </figure>
                                     </div>
                                     <!-- Service Entry Image End -->
@@ -190,8 +191,8 @@
                                     <!-- Service Entry Item Start -->
                                     <div class="service-entry-item wow fadeInUp">
                                         <div class="icon-box">
-                                            <img src="{{ asset('assets/images/icon-service-entry-item-1.svg') }}"
-                                                alt="">
+                                            <img src="{{ asset('assets/images/icon-service-entry-item-1.svg') }}" alt=""
+                                                aria-hidden="true">
                                         </div>
                                         <div class="service-entry-item-content">
                                             <h3>Smooth Relocation</h3>
@@ -206,8 +207,8 @@
                                     <!-- Service Entry Item Start -->
                                     <div class="service-entry-item wow fadeInUp" data-wow-delay="0.2s">
                                         <div class="icon-box">
-                                            <img src="{{ asset('assets/images/icon-service-entry-item-2.svg') }}"
-                                                alt="">
+                                            <img src="{{ asset('assets/images/icon-service-entry-item-2.svg') }}" alt=""
+                                                aria-hidden="true">
                                         </div>
                                         <div class="service-entry-item-content">
                                             <h3>Complete Care & Safety</h3>
@@ -250,7 +251,7 @@
                             <!-- FAQ Accordion Start -->
                             <div class="faq-accordion" id="faqaccordion">
                                 <!-- FAQ Item Start -->
-                                @foreach ($service->faqs as $faq)
+                                @foreach ($city->faqs as $faq)
                                     <div class="accordion-item wow fadeInUp">
                                         <h4 class="accordion-header" id="heading{{ $faq->id }}">
                                             <button class="accordion-button collapsed" type="button"
@@ -279,9 +280,9 @@
         </div>
     </div>
 
-    @if(!empty($service->schema_markup))
+    @if(!empty($city->schema_markup))
         <script type="application/ld+json">
-                        {!! $service->schema_markup !!}
-                    </script>
+                                    {!! $city->schema_markup !!}
+                                </script>
     @endif
 </x-layout>

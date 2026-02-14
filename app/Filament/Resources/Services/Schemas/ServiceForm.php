@@ -34,6 +34,7 @@ class ServiceForm
                             ]),
                         RichEditor::make('description')
                             ->required()
+                            ->sanitizeHtml()
                             ->columnSpanFull(),
                         FileUpload::make('image')
                             ->disk('uploads')
