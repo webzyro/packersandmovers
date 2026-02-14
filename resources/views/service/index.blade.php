@@ -13,9 +13,9 @@
                                 <img src="{{ asset('assets/images/icon-service-item-1.svg') }}" alt="">
                             </div>
                             <div class="service-content">
-                                <h3><a href="house-shifting.html">{{ $service->title }}</a></h3>
+                                <h3><a href="{{ route('services.show', $service->slug) }}">{{ $service->title }}</a></h3>
                                 <p>
-                                    {!! Str::limit($service->description, 80) !!}
+                                    {{ Str::limit($service->description, 80) }}
                                 </p>
 
                             </div>

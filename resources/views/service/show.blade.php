@@ -56,7 +56,8 @@
                         <!-- Page Single Image Start -->
                         <div class="page-single-image">
                             <figure class="image-anime reveal">
-                                <img src="{{ Storage::url($service->image) }}" alt="">
+                                <img src="{{ $service->image ? Storage::disk('uploads')->url($service->image) : asset('assets/images/placeholder.jpg') }}"
+                                    alt="{{ $service->title }}">
                             </figure>
                         </div>
                         <!-- Page Single Image End -->
@@ -253,9 +254,9 @@
                                 @foreach ($service->faqs as $faq)
                                     <div class="accordion-item wow fadeInUp">
                                         <h2 class="accordion-header" id="heading{{ $faq->id }}">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#collapse{{ $faq->id }}" aria-expanded="true"
-                                                aria-controls="collapse{{ $faq->id }}">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse{{ $faq->id }}"
+                                                aria-expanded="false" aria-controls="collapse{{ $faq->id }}">
                                                 {{ $faq->question }}
                                             </button>
                                         </h2>
