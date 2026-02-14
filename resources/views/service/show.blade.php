@@ -1,5 +1,5 @@
 <x-layout>
-    <x-breadcrumb title="Residential moving" />
+    <x-breadcrumb title="{{ $service->title }}" />
 
     <div class="page-service-single">
         <div class="container">
@@ -56,45 +56,19 @@
                         <!-- Page Single Image Start -->
                         <div class="page-single-image">
                             <figure class="image-anime reveal">
-                                <img src="{{ asset('assets/images/service-single-image.jpg') }}" alt="">
+                                <img src="{{ $service->image ? Storage::disk('uploads')->url($service->image) : asset('assets/images/placeholder.jpg') }}"
+                                    alt="{{ $service->title }}">
                             </figure>
                         </div>
                         <!-- Page Single Image End -->
 
                         <!-- Service Entry Start -->
                         <div class="service-entry">
-                            <p class="wow fadeInUp">
-                                At Grand Packers and Movers, we understand that moving to a new home can be
-                                both exciting and challenging. Our Residential Moving services are designed
-                                to make your relocation smooth, safe, and completely hassle-free. From
-                                careful packing of household items to secure transportation and systematic
-                                unloading, our trained professionals handle every step with precision and care.
-                            </p>
-
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">
-                                Whether you are shifting an apartment, independent house, or flat—locally or
-                                across cities—we ensure timely delivery and damage-free handling of your
-                                belongings. With Grand Packers and Movers, you can enjoy a stress-free home
-                                relocation experience backed by reliability, expertise, and customer-focused
-                                service.
-                            </p>
+                            {!! $service->description !!}
 
 
                             <!-- Service Solution Box Start -->
                             <div class="service-solution-box">
-                                <h2 class="text-anime-style-2">
-                                    Smart Moving Solutions Designed for <span>Your Comfort</span>
-                                </h2>
-
-                                <p class="wow fadeInUp">
-                                    Moving to a new home is a fresh beginning. At Grand Packers and Movers,
-                                    our Residential Moving services are designed to ensure a smooth and
-                                    hassle-free transition. From careful packing of your valuables to
-                                    secure local and long-distance transportation, our expert team manages
-                                    every step to deliver a safe and stress-free moving experience.
-                                </p>
-
-
                                 <!-- Service Entry Step List Start -->
                                 <div class="service-solution-steps">
                                     <!-- Service Entry Step Item Start -->
@@ -277,78 +251,23 @@
                             <!-- FAQ Accordion Start -->
                             <div class="faq-accordion" id="faqaccordion">
                                 <!-- FAQ Item Start -->
-                                <div class="accordion-item wow fadeInUp">
-                                    <h2 class="accordion-header" id="heading1">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                            How far in advance should I book my move?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse1" class="accordion-collapse collapse show"
-                                        aria-labelledby="heading1" data-bs-parent="#faqaccordion">
-                                        <div class="accordion-body">
-                                            <p>We recommend booking your move at least 2-4 weeks in advance to ensure
-                                                availability, especially during peak seasons.</p>
+                                @foreach ($service->faqs as $faq)
+                                    <div class="accordion-item wow fadeInUp">
+                                        <h2 class="accordion-header" id="heading{{ $faq->id }}">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapse{{ $faq->id }}"
+                                                aria-expanded="false" aria-controls="collapse{{ $faq->id }}">
+                                                {{ $faq->question }}
+                                            </button>
+                                        </h2>
+                                        <div id="collapse{{ $faq->id }}" class="accordion-collapse collapse"
+                                            aria-labelledby="heading{{ $faq->id }}" data-bs-parent="#faqaccordion">
+                                            <div class="accordion-body">
+                                                <p>{{ $faq->answer }}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- FAQ Item End -->
-
-                                <!-- FAQ Item Start -->
-                                <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
-                                    <h2 class="accordion-header" id="heading2">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false"
-                                            aria-controls="collapse2">
-                                            Do you provide packing materials?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
-                                        data-bs-parent="#faqaccordion">
-                                        <div class="accordion-body">
-                                            <p>We recommend booking your move at least 2-4 weeks in advance to ensure
-                                                availability, especially during peak seasons.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- FAQ Item End -->
-
-                                <!-- FAQ Item Start -->
-                                <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
-                                    <h2 class="accordion-header" id="heading3">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false"
-                                            aria-controls="collapse3">
-                                            Are my belongings insured during the move?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
-                                        data-bs-parent="#faqaccordion">
-                                        <div class="accordion-body">
-                                            <p>We recommend booking your move at least 2-4 weeks in advance to ensure
-                                                availability, especially during peak seasons.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- FAQ Item End -->
-
-                                <!-- FAQ Item Start -->
-                                <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
-                                    <h2 class="accordion-header" id="heading4">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false"
-                                            aria-controls="collapse4">
-                                            Do you offer long-distance moving services?
-                                        </button>
-                                    </h2>
-                                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
-                                        data-bs-parent="#faqaccordion">
-                                        <div class="accordion-body">
-                                            <p>We recommend booking your move at least 2-4 weeks in advance to ensure
-                                                availability, especially during peak seasons.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                                 <!-- FAQ Item End -->
                             </div>
                             <!-- FAQ Accordion End -->
