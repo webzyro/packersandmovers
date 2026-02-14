@@ -52,3 +52,6 @@ Route::get('/branches', function () {
 Route::get('/clients', function () {
     return view('clients');
 })->name('clients');
+
+use App\Http\Controllers\CityPageController;
+Route::get('/packers-and-movers-in-{slug}', [CityPageController::class, 'show'])->name('city.show');

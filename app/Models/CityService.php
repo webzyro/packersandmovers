@@ -25,8 +25,20 @@ class CityService extends Model
         'is_active' => 'boolean',
     ];
 
+    /**
+     * Set the city service's description with sanitization.
+     *
+     * @param string $value
+     * @return void
+     */
+    public function setDescriptionAttribute($value)
+    {
+        $allowedTags = '<h1><h2><h3><h4><h5><h6><p><ul><li><ol><a><b><i><u><strong><em><br><span><div><img>';
+        $this->attributes['description'] = strip_tags($value, $allowedTags);
+    }
+
     public function city(): BelongsTo
     {
-        return $this->belongsTo(CityPage::class);
+        return $this->belongsTo(CityPage::class, 'city_id');
     }
 }
