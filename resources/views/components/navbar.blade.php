@@ -17,53 +17,12 @@
                             <li class="nav-item submenu">
                                 <a class="nav-link" href="{{ route('services.index') }}">Services</a>
                                 <ul>
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                            href="{{ route('services.show', ['slug' => 'house-shifting']) }}">House
-                                            Shifting</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                            href="{{ route('services.show', ['slug' => 'office-relocation']) }}">Office
-                                            Relocation</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                            href="{{ route('services.show', ['slug' => 'car-transport']) }}">Car
-                                            Transportation</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                            href="{{ route('services.show', ['slug' => 'bike-transport']) }}">Bike
-                                            Transportation</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                            href="{{ route('services.show', ['slug' => 'packing-unpacking']) }}">Packing
-                                            & Unpacking</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                            href="{{ route('services.show', ['slug' => 'local-moving']) }}">Local
-                                            Shifting</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                            href="{{ route('services.show', ['slug' => 'intercity-moving']) }}">Intercity
-                                            Relocation</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link"
-                                            href="{{ route('services.show', ['slug' => 'storage-warehouse']) }}">Warehouse
-                                            & Storage</a>
-                                    </li>
+                                    @foreach ($services as $service)
+                                        <li class="nav-item">
+                                            <a class="nav-link"
+                                                href="{{ route('services.show', $service->slug) }}">{{ $service->title }}</a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('gallery') }}">Gallery</a></li>
