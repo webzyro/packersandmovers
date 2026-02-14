@@ -11,12 +11,10 @@
                         <div class="page-sidebar-catagery-list wow fadeInUp">
                             <h3>services category</h3>
                             <ul>
-                                <li><a href="house-shifting.html">House Shifting</a></li>
-                                <li><a href="office-relocation.html">Office Relocation</a></li>
-                                <li><a href="car-transport.html">Car Transportation</a></li>
-                                <li><a href="bike-transport.html">Bike Transportation</a></li>
-                                <li><a href="packing-unpacking.html">Packing & Unpacking</a></li>
-                                <li><a href="storage-warehouse.html">Warehouse & Storage</a></li>
+                                @foreach ($services as $service)
+                                    <li><a href="{{ route('services.show', $service->slug) }}">{{ $service->title }}</a>
+                                    </li>
+                                @endforeach
                             </ul>
 
                         </div>

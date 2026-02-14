@@ -3,7 +3,7 @@
 
     <x-about-section />
 
-    <x-service-section />
+    <x-service-section :services="$services" />
 
     <x-project-section />
 
