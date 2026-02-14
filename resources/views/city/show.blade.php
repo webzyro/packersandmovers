@@ -281,7 +281,7 @@
 
     @if(!empty($service->schema_markup))
         <script type="application/ld+json">
-                        {!! $service->schema_markup !!}
-                    </script>
+                            {!! $service->schema_markup !!}
+                        </script>
     @endif
 </x-layout>
