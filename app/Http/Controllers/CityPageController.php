@@ -16,17 +16,17 @@ class CityPageController extends Controller
         return view('city.show', compact('city', 'sidebarServices'));
     }
 
-    public function service(string $service_slug)
+    public function service(string $slug, string $service_slug)
     {
         $service = CityService::whereRelation(
             'city',
             'slug',
-            $service_slug
+            $slug
         )
             ->whereRelation('city', 'is_active', true)
+            ->where('slug', $service_slug)
+            ->where('is_active', true)
             ->firstOrFail();
-
-        // dd($service);
 
         return view('city.service', compact('service'));
     }

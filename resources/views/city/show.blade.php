@@ -143,128 +143,128 @@
 
                                 <!-- Services Start -->
                                 <div class="row g-4 mt-3">
-                                    @foreach ($city->services as $service)
+                                    @foreach ($city->services->where('is_active', true) as $service)
                                         <div class="col-md-6">
                                             <div class="rounded-4 overflow-hidden shadow-lg">
                                                 <div class="service-secure-box-image">
-                                                    <img src="{{ Storage::disk('uploads')->url($service->image) }}"
-                                                        alt="Service Secure Box Image">
-                                                </div>
-                                                <div class="p-4">
-                                                    <h5>{{ $service->title }}</h5>
-                                                    <p>{{ Str::limit(strip_tags($service->description), 80) }}</p>
-                                                    <div class="service-btn">
-                                                        <a href="{{ route('city.service', [$city->slug, $service->slug]) }}"
-                                                            class="readmore-btn">read more</a>
+                                                    <img src="{{ $service->image ? Storage::disk('uploads')->url($service->image) : asset('assets/images/placeholder.jpg') }}"
+                                                        </div>
+                                                    <div class="p-4">
+                                                        <h5>{{ $service->title }}</h5>
+                                                        <p>{{ Str::limit(strip_tags($service->description), 80) }}</p>
+                                                        <div class="service-btn">
+                                                            <a href="{{ route('city.service', [$city->slug, $service->slug]) }}"
+                                                                class="readmore-btn">read more</a>
+                                                        </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                    @endforeach
+                                    </div>
+                                    <!-- Services End -->
+                                </div>
+                                <!-- Service Secure Box End -->
+
+                                <!-- Service Entry Item Box Start -->
+                                <div class="service-entry-item-box">
+                                    <!-- Service Entry Item List Start -->
+                                    <div class="service-entry-item-list">
+                                        <!-- Service Entry Item Start -->
+                                        <div class="service-entry-item wow fadeInUp">
+                                            <div class="icon-box">
+                                                <img src="{{ asset('assets/images/icon-service-entry-item-1.svg') }}"
+                                                    alt="" aria-hidden="true">
+                                            </div>
+                                            <div class="service-entry-item-content">
+                                                <h3>Smooth Relocation</h3>
+                                                <p>
+                                                    Professional planning and execution for a stress-free moving
+                                                    experience.
+                                                </p>
+
+                                            </div>
+                                        </div>
+                                        <!-- Service Entry Item End -->
+
+                                        <!-- Service Entry Item Start -->
+                                        <div class="service-entry-item wow fadeInUp" data-wow-delay="0.2s">
+                                            <div class="icon-box">
+                                                <img src="{{ asset('assets/images/icon-service-entry-item-2.svg') }}"
+                                                    alt="" aria-hidden="true">
+                                            </div>
+                                            <div class="service-entry-item-content">
+                                                <h3>Complete Care & Safety</h3>
+                                                <p>
+                                                    We treat your belongings with care, precision, and responsibility
+                                                    throughout the relocation process.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+                                        <!-- Service Entry Item End -->
+                                    </div>
+                                    <!-- Service Entry Item List End -->
+
+                                    <!-- Service Entry List Start -->
+                                    <div class="service-entry-list wow fadeInUp" data-wow-delay="0.4s">
+                                        <ul>
+                                            <li>Smooth Transitions to Your Perfect City Home</li>
+                                            <li>Simplifying Relocations for Busy City Lifestyles</li>
+                                            <li>Reliable Moves for Comfortable Urban Living</li>
+                                            <li>Trusted Moving Solutions for Urban Dreams</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Service Entry List End -->
+                                </div>
+                                <!-- Service Entry Item Box End -->
+                            </div>
+                            <!-- Service Entry End -->
+
+                            <!-- Page Single FAQs Start -->
+                            <div class="page-single-faqs">
+                                <!-- Section Title Start -->
+                                <div class="section-title">
+                                    <h3 class="text-anime-style-2" data-cursor="-opaque">Answers to your <span>moving
+                                            questions</span></h3>
+                                </div>
+                                <!-- Section Title End -->
+
+                                <!-- FAQ Accordion Start -->
+                                <div class="faq-accordion" id="faqaccordion">
+                                    <!-- FAQ Item Start -->
+                                    @foreach ($city->faqs as $faq)
+                                        <div class="accordion-item wow fadeInUp">
+                                            <h4 class="accordion-header" id="heading{{ $faq->id }}">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapse{{ $faq->id }}"
+                                                    aria-expanded="false" aria-controls="collapse{{ $faq->id }}">
+                                                    {{ $faq->question }}
+                                                </button>
+                                            </h4>
+                                            <div id="collapse{{ $faq->id }}" class="accordion-collapse collapse"
+                                                aria-labelledby="heading{{ $faq->id }}" data-bs-parent="#faqaccordion">
+                                                <div class="accordion-body">
+                                                    <p>{{ $faq->answer }}</p>
                                                 </div>
                                             </div>
                                         </div>
                                     @endforeach
+                                    <!-- FAQ Item End -->
                                 </div>
-                                <!-- Services End -->
+                                <!-- FAQ Accordion End -->
                             </div>
-                            <!-- Service Secure Box End -->
-
-                            <!-- Service Entry Item Box Start -->
-                            <div class="service-entry-item-box">
-                                <!-- Service Entry Item List Start -->
-                                <div class="service-entry-item-list">
-                                    <!-- Service Entry Item Start -->
-                                    <div class="service-entry-item wow fadeInUp">
-                                        <div class="icon-box">
-                                            <img src="{{ asset('assets/images/icon-service-entry-item-1.svg') }}" alt=""
-                                                aria-hidden="true">
-                                        </div>
-                                        <div class="service-entry-item-content">
-                                            <h3>Smooth Relocation</h3>
-                                            <p>
-                                                Professional planning and execution for a stress-free moving experience.
-                                            </p>
-
-                                        </div>
-                                    </div>
-                                    <!-- Service Entry Item End -->
-
-                                    <!-- Service Entry Item Start -->
-                                    <div class="service-entry-item wow fadeInUp" data-wow-delay="0.2s">
-                                        <div class="icon-box">
-                                            <img src="{{ asset('assets/images/icon-service-entry-item-2.svg') }}" alt=""
-                                                aria-hidden="true">
-                                        </div>
-                                        <div class="service-entry-item-content">
-                                            <h3>Complete Care & Safety</h3>
-                                            <p>
-                                                We treat your belongings with care, precision, and responsibility
-                                                throughout the relocation process.
-                                            </p>
-
-                                        </div>
-
-                                    </div>
-                                    <!-- Service Entry Item End -->
-                                </div>
-                                <!-- Service Entry Item List End -->
-
-                                <!-- Service Entry List Start -->
-                                <div class="service-entry-list wow fadeInUp" data-wow-delay="0.4s">
-                                    <ul>
-                                        <li>Smooth Transitions to Your Perfect City Home</li>
-                                        <li>Simplifying Relocations for Busy City Lifestyles</li>
-                                        <li>Reliable Moves for Comfortable Urban Living</li>
-                                        <li>Trusted Moving Solutions for Urban Dreams</li>
-                                    </ul>
-                                </div>
-                                <!-- Service Entry List End -->
-                            </div>
-                            <!-- Service Entry Item Box End -->
+                            <!-- Page Single FAQs End -->
                         </div>
-                        <!-- Service Entry End -->
-
-                        <!-- Page Single FAQs Start -->
-                        <div class="page-single-faqs">
-                            <!-- Section Title Start -->
-                            <div class="section-title">
-                                <h3 class="text-anime-style-2" data-cursor="-opaque">Answers to your <span>moving
-                                        questions</span></h3>
-                            </div>
-                            <!-- Section Title End -->
-
-                            <!-- FAQ Accordion Start -->
-                            <div class="faq-accordion" id="faqaccordion">
-                                <!-- FAQ Item Start -->
-                                @foreach ($city->faqs as $faq)
-                                    <div class="accordion-item wow fadeInUp">
-                                        <h4 class="accordion-header" id="heading{{ $faq->id }}">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapse{{ $faq->id }}"
-                                                aria-expanded="false" aria-controls="collapse{{ $faq->id }}">
-                                                {{ $faq->question }}
-                                            </button>
-                                        </h4>
-                                        <div id="collapse{{ $faq->id }}" class="accordion-collapse collapse"
-                                            aria-labelledby="heading{{ $faq->id }}" data-bs-parent="#faqaccordion">
-                                            <div class="accordion-body">
-                                                <p>{{ $faq->answer }}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                                <!-- FAQ Item End -->
-                            </div>
-                            <!-- FAQ Accordion End -->
-                        </div>
-                        <!-- Page Single FAQs End -->
+                        <!-- Service Single Content End -->
                     </div>
-                    <!-- Service Single Content End -->
                 </div>
             </div>
         </div>
-    </div>
 
-    @if(!empty($city->schema_markup))
-        <script type="application/ld+json">
-                                                                                        {!! $city->schema_markup !!}
-                                                                                    </script>
-    @endif
+        @if(!empty($city->schema_markup))
+            <script type="application/ld+json">
+                                                                                                    {!! $city->schema_markup !!}
+                                                                                                </script>
+        @endif
 </x-layout>
