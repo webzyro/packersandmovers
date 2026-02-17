@@ -18,7 +18,7 @@
     </div>
     @if (!empty($service->schema_markup))
         <script type="application/ld+json">
-                    {!! $service->schema_markup !!}
-                </script>
+                        {!! json_encode($service->schema_markup) !!}
+                    </script>
     @endif
 </x-layout>
