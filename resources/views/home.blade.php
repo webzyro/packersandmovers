@@ -22,4 +22,6 @@
     <x-team />
 
     <x-blog />
+
+    <x-city />
 </x-layout>

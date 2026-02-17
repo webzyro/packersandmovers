@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CityPageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +17,9 @@ Route::get('/contact', function () {
 
 Route::get('/services', [ServiceController::class, 'index'])->name('services.index');
 Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('services.show');
+
+Route::get('/city/{slug}', [CityPageController::class, 'show'])->name('city.show');
+Route::get('/city/{slug}/{service_slug}', [CityPageController::class, 'service'])->name('city.service');
 
 Route::get('/projects', function () {
     return view('projects');

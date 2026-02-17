@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\CityPage;
 use App\Models\Service;
 use Illuminate\Support\ServiceProvider;
 use View;
@@ -22,7 +23,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         View::composer('components.navbar', function ($view) {
-            $view->with('services', Service::where('is_active', true)->get());
+            $view->with('services', Service::where('is_active', true)->get(['title', 'slug']));
+        });
+        View::composer('components.city', function ($view) {
+            $view->with('cities', CityPage::where('is_active', true)->get(['title', 'slug']));
         });
     }
 }

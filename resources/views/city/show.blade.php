@@ -141,46 +141,28 @@
                             <div class="service-secure-box">
                                 <h3 class="text-anime-style-2">Moving made <span>simple and secure</span></h3>
 
-                                <!-- Service Entry Image Content Start -->
-                                <div class="service-entry-image-content">
-                                    <!-- Service Entry Image Start -->
-                                    <div class="service-entry-image">
-                                        <figure class="image-anime reveal">
-                                            <img src="{{ asset('assets/images/service-entry-image.jpg') }}"
-                                                alt="Our team at work">
-                                        </figure>
-                                    </div>
-                                    <!-- Service Entry Image End -->
-
-                                    <!-- Service Entry Content Start -->
-                                    <div class="service-entry-content">
-                                        <!-- Service Entry Content Item Start -->
-                                        <div class="service-entry-content-item wow fadeInUp">
-                                            <h3>Quality packing materials</h3>
-                                            <p>We use premium materials to ensure the safety & security of your
-                                                belongings during the move.</p>
+                                <!-- Services Start -->
+                                <div class="row g-4 mt-3">
+                                    @foreach ($city->services->where('is_active', true) as $service)
+                                        <div class="col-md-6">
+                                            <div class="rounded-4 overflow-hidden shadow-lg">
+                                                <div class="service-secure-box-image">
+                                                    <img src="{{ $service->image ? Storage::disk('uploads')->url($service->image) : asset('assets/images/placeholder.jpg') }}"
+                                                        alt="{{ $service->title }}">
+                                                </div>
+                                                <div class="p-4">
+                                                    <h5>{{ $service->title }}</h5>
+                                                    <p>{{ Str::limit(strip_tags($service->description), 80) }}</p>
+                                                    <div class="service-btn">
+                                                        <a href="{{ route('city.service', [$city->slug, $service->slug]) }}"
+                                                            class="readmore-btn">read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <!-- Service Entry Content Item End -->
-
-                                        <!-- Service Entry Content Item Start -->
-                                        <div class="service-entry-content-item wow fadeInUp" data-wow-delay="0.2s">
-                                            <h3>Expert moving team</h3>
-                                            <p>Our experienced professionals handle every step of moving process with
-                                                precision & care.</p>
-                                        </div>
-                                        <!-- Service Entry Content Item End -->
-
-                                        <!-- Service Entry Content Item Start -->
-                                        <div class="service-entry-content-item wow fadeInUp" data-wow-delay="0.4s">
-                                            <h3>Enhanced relocation experience</h3>
-                                            <p>Our services are designed to make your move smooth, efficient and
-                                                stress-free.</p>
-                                        </div>
-                                        <!-- Service Entry Content Item End -->
-                                    </div>
-                                    <!-- Service Entry Content End -->
+                                    @endforeach
                                 </div>
-                                <!-- Service Entry Image Content End -->
+                                <!-- Services End -->
                             </div>
                             <!-- Service Secure Box End -->
 
@@ -197,7 +179,8 @@
                                         <div class="service-entry-item-content">
                                             <h3>Smooth Relocation</h3>
                                             <p>
-                                                Professional planning and execution for a stress-free moving experience.
+                                                Professional planning and execution for a stress-free moving
+                                                experience.
                                             </p>
 
                                         </div>
@@ -282,7 +265,7 @@
 
     @if(!empty($city->schema_markup))
         <script type="application/ld+json">
-                                    {!! $city->schema_markup !!}
-                                </script>
+                                                                                                            {!! $city->schema_markup !!}
+                                                                                                        </script>
     @endif
 </x-layout>
