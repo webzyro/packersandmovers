@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use App\Models\CityService;
 use App\Models\CityPage;
 use App\Models\Service;
 
@@ -15,5 +14,20 @@ class CityPageController extends Controller
         $sidebarServices = Service::where('is_active', true)->latest()->take(5)->get(['title', 'slug']);
 
         return view('city.show', compact('city', 'sidebarServices'));
+    }
+
+    public function service(string $service_slug)
+    {
+        $service = CityService::whereRelation(
+            'city',
+            'slug',
+            $service_slug
+        )
+            ->whereRelation('city', 'is_active', true)
+            ->firstOrFail();
+
+        // dd($service);
+
+        return view('city.service', compact('service'));
     }
 }
