@@ -17,6 +17,8 @@ class BlogController extends Controller
     {
         $blog = Blog::where('slug', $slug)->where('is_active', true)->firstOrFail();
 
-        return view('blog.show', ['blog' => $blog]);
+        $sidebarBlogs = Blog::where('is_active', true)->where('slug', '!=', $slug)->latest()->take(5)->get(['title', 'slug']);
+
+        return view('blog.show', ['blog' => $blog, 'sidebarBlogs' => $sidebarBlogs]);
     }
 }

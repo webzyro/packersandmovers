@@ -55,13 +55,59 @@
                     </div>
                     <!-- Post Single Content End -->
                 </div>
+                <div class="col-lg-4">
+                    <!-- Page Single Sidebar Start -->
+                    <div class="page-single-sidebar">
+                        <!-- Page Sidebar Category List Start -->
+                        <div class="page-sidebar-catagery-list wow fadeInUp">
+                            <h3>Recent Blogs</h3>
+                            <ul>
+                                @if (!empty($sidebarBlogs))
+                                    @foreach ($sidebarBlogs as $sidebarBlog)
+                                        <li><a href="{{ route('blog.show', $sidebarBlog->slug) }}">{{ $sidebarBlog->title }}</a>
+                                        </li>
+                                    @endforeach
+                                @else
+                                    <li>No Recent Blogs</li>
+                                @endif
+
+                            </ul>
+
+                        </div>
+                        <!-- Page Sidebar Category List End -->
+
+                        <!-- Sidebar CTA Box Start -->
+                        <div class="sidebar-cta-box wow fadeInUp" data-wow-delay="0.2s">
+                            <!-- Sidebar Cta Logo Start -->
+                            <div class="sidebar-cta-logo">
+                                <img src="{{ asset('assets/images/logo.svg') }}" alt="">
+                            </div>
+                            <!-- Sidebar Cta Logo End -->
+
+                            <!-- Sidebar CTA Content Start -->
+                            <div class="sidebar-cta-content">
+                                <h3>How can we help?</h3>
+                                <p>Ram Krishna Nagar,Patna, Bihar(800027)</p>
+                                <p><a href="mailto:grandpackerspatna@gmail.com">grandpackerspatna@gmail.com</a></p>
+                            </div>
+                            <!-- Sidebar CTA Content End -->
+
+                            <!-- Sidebar CTA Button Start -->
+                            <div class="sidebar-cta-btn">
+                                <a href="tel:+919546988569"><img src="{{ asset('assets/images/icon-phone.svg') }}"
+                                        alt="">+91 9546988569</a>
+                            </div>
+                            <!-- Sidebar CTA Button End -->
+                        </div>
+                        <!-- Sidebar CTA Box End -->
+                    </div>
+                    <!-- Page Single Sidebar End -->
+                </div>
             </div>
         </div>
     </div>
 
     @if(!empty($blog->schema_markup))
-        <script type="application/ld+json">
-                                    {!! json_encode($blog->schema_markup) !!}
-                                </script>
+        <script type="application/ld+json">{!! json_encode($blog->schema_markup) !!}</script>
     @endif
 </x-layout>
