@@ -1,5 +1,5 @@
 <x-layout>
-    <x-breadcrumb title="Single blog" />
+    <x-breadcrumb :title="$blog->title" />
 
     <div class="page-single-post">
         <div class="container">
@@ -58,4 +58,10 @@
             </div>
         </div>
     </div>
+
+    @if(!empty($blog->schema_markup))
+        <script type="application/ld+json">
+                                    {!! json_encode($blog->schema_markup) !!}
+                                </script>
+    @endif
 </x-layout>
