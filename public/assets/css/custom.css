@@ -3297,6 +3297,22 @@ header.main-header .header-sticky.active{
 	background-size: 22px auto;
 }
 
+.service-entry table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.service-entry table,
+.service-entry th,
+.service-entry td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+}
+
+.service-entry thead {
+    background-color: #f8f9fa;
+}
+
 .service-solution-box,
 .service-secure-box,
 .service-entry-item-box{
