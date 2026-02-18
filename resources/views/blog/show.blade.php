@@ -62,7 +62,7 @@
                         <div class="page-sidebar-catagery-list wow fadeInUp">
                             <h3>Recent Blogs</h3>
                             <ul>
-                                @if (!empty($sidebarBlogs))
+                                @if ($sidebarBlogs->isNotEmpty())
                                     @foreach ($sidebarBlogs as $sidebarBlog)
                                         <li><a href="{{ route('blog.show', $sidebarBlog->slug) }}">{{ $sidebarBlog->title }}</a>
                                         </li>
@@ -80,7 +80,7 @@
                         <div class="sidebar-cta-box wow fadeInUp" data-wow-delay="0.2s">
                             <!-- Sidebar Cta Logo Start -->
                             <div class="sidebar-cta-logo">
-                                <img src="{{ asset('assets/images/logo.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/logo.svg') }}" alt="{{ $blog->title }}">
                             </div>
                             <!-- Sidebar Cta Logo End -->
 
@@ -108,6 +108,6 @@
     </div>
 
     @if(!empty($blog->schema_markup))
-        <script type="application/ld+json">{!! json_encode($blog->schema_markup) !!}</script>
+        <script type="application/ld+json">{!! json_encode($blog->schema_markup, JSON_HEX_TAG) !!}</script>
     @endif
 </x-layout>
