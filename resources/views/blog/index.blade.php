@@ -38,6 +38,14 @@
                         <!-- Post Item End -->
                     </div>
                 @endforeach
+
+                <div class="col-lg-12">
+                    <!-- Page Pagination Start -->
+                    <div class="page-pagination wow fadeInUp" data-wow-delay="1.2s">
+                        {{ $blogs->links() }}
+                    </div>
+                    <!-- Page Pagination End -->
+                </div>
             </div>
         </div>
     </div>
