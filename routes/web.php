@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CityPageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
@@ -29,13 +30,8 @@ Route::get('/projects/{slug}', function ($slug) {
     return view('project-single', compact('slug'));
 })->name('projects.show');
 
-Route::get('/blog', function () {
-    return view('blog');
-})->name('blog.index');
-
-Route::get('/blog/{slug}', function ($slug) {
-    return view('blog-single', compact('slug'));
-})->name('blog.show');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 Route::get('/team', function () {
     return view('team');
