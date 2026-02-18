@@ -21,7 +21,7 @@
 
     <x-team />
 
-    <x-blog />
+    <x-blog :blogs="$blogs" />
 
     <x-city />
 </x-layout>

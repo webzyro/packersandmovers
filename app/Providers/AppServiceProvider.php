@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\CityPage;
 use App\Models\Service;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Pagination\Paginator;
 use View;
 
 class AppServiceProvider extends ServiceProvider
@@ -28,5 +29,8 @@ class AppServiceProvider extends ServiceProvider
         View::composer('components.city', function ($view) {
             $view->with('cities', CityPage::where('is_active', true)->get(['title', 'slug']));
         });
+
+        Paginator::useBootstrap();
+
     }
 }

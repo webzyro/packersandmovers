@@ -8,7 +8,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogs = Blog::where('is_active', true)->latest()->paginate(9);
+        $blogs = Blog::where('is_active', true)->latest()->paginate(9, ['id', 'image', 'title', 'slug']);
 
         return view('blog.index', ['blogs' => $blogs]);
     }

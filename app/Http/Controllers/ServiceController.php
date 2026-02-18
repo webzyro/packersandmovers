@@ -9,7 +9,7 @@ class ServiceController extends Controller
 {
     public function index()
     {
-        $services = Service::where('is_active', true)->latest()->get();
+        $services = Service::where('is_active', true)->latest()->get(['title', 'slug', 'description']);
 
         return view('service.index', ['services' => $services]);
     }

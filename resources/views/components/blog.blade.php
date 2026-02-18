@@ -1,3 +1,5 @@
+@props(['blogs' => []])
+
 <div class="our-blog">
     <div class="container">
         <div class="row section-row align-items-center">
@@ -22,109 +24,40 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <!-- Post Item Start -->
-                <div class="post-item wow fadeInUp">
-                    <!-- Post Featured Image Start-->
-                    <div class="post-featured-image">
-                        <a href="{{ route('blog.show', ['slug' => 'how-to-unpack-efficiently']) }}"
-                            data-cursor-text="View">
-                            <figure class="image-anime">
-                                <img src="{{asset('assets/images/post-1.jpg')}}" alt="post-1">
-                            </figure>
-                        </a>
-                    </div>
-                    <!-- Post Featured Image End -->
-
-                    <!-- Post Item Body Start -->
-                    <div class="post-item-body">
-                        <!-- Post Item Content Start -->
-                        <div class="post-item-content">
-                            <h3><a href="{{ route('blog.show', ['slug' => 'how-to-unpack-efficiently']) }}">How to
-                                    Unpack Efficiently After Your Move</a></h3>
+            @foreach ($blogs as $blog)
+                <div class="col-lg-4 col-md-6">
+                    <!-- Post Item Start -->
+                    <div class="post-item wow fadeInUp">
+                        <!-- Post Featured Image Start-->
+                        <div class="post-featured-image">
+                            <a href="{{ route('blog.show', $blog->slug) }}" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="{{ Storage::disk('uploads')->url($blog->image) }}" alt="post-1">
+                                </figure>
+                            </a>
                         </div>
-                        <!-- Post Item Content End -->
+                        <!-- Post Featured Image End -->
 
-                        <!-- Post Item Readmore Button Start-->
-                        <div class="post-item-btn">
-                            <a href="{{ route('blog.show', ['slug' => 'how-to-unpack-efficiently']) }}"
-                                class="readmore-btn">read more</a>
+                        <!-- Post Item Body Start -->
+                        <div class="post-item-body">
+                            <!-- Post Item Content Start -->
+                            <div class="post-item-content">
+                                <h3><a href="{{ route('blog.show', $blog->slug) }}">{{ $blog->title }}</a>
+                                </h3>
+                            </div>
+                            <!-- Post Item Content End -->
+
+                            <!-- Post Item Readmore Button Start-->
+                            <div class="post-item-btn">
+                                <a href="{{ route('blog.show', $blog->slug) }}" class="readmore-btn">read more</a>
+                            </div>
+                            <!-- Post Item Readmore Button End-->
                         </div>
-                        <!-- Post Item Readmore Button End-->
+                        <!-- Post Item Body End -->
                     </div>
-                    <!-- Post Item Body End -->
+                    <!-- Post Item End -->
                 </div>
-                <!-- Post Item End -->
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!-- Post Item Start -->
-                <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
-                    <!-- Post Featured Image Start-->
-                    <div class="post-featured-image">
-                        <a href="{{ route('blog.show', ['slug' => 'packing-fragile-items']) }}" data-cursor-text="View">
-                            <figure class="image-anime">
-                                <img src="{{asset('assets/images/post-2.jpg')}}" alt="post-2">
-                            </figure>
-                        </a>
-                    </div>
-                    <!-- Post Featured Image End -->
-
-                    <!-- Post Item Body Start -->
-                    <div class="post-item-body">
-                        <!-- Post Item Content Start -->
-                        <div class="post-item-content">
-                            <h3><a href="{{ route('blog.show', ['slug' => 'packing-fragile-items']) }}">The Ultimate
-                                    Guide to Packing Fragile Items</a></h3>
-                        </div>
-                        <!-- Post Item Content End -->
-
-                        <!-- Post Item Readmore Button Start-->
-                        <div class="post-item-btn">
-                            <a href="{{ route('blog.show', ['slug' => 'packing-fragile-items']) }}"
-                                class="readmore-btn">read more</a>
-                        </div>
-                        <!-- Post Item Readmore Button End-->
-                    </div>
-                    <!-- Post Item Body End -->
-                </div>
-                <!-- Post Item End -->
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!-- Post Item Start -->
-                <div class="post-item wow fadeInUp" data-wow-delay="0.4s">
-                    <!-- Post Featured Image Start-->
-                    <div class="post-featured-image">
-                        <a href="{{ route('blog.show', ['slug' => 'professional-packing-services']) }}"
-                            data-cursor-text="View">
-                            <figure class="image-anime">
-                                <img src="{{asset('assets/images/post-3.jpg')}}" alt="post-3">
-                            </figure>
-                        </a>
-                    </div>
-                    <!-- Post Featured Image End -->
-
-                    <!-- Post Item Body Start -->
-                    <div class="post-item-body">
-                        <!-- Post Item Content Start -->
-                        <div class="post-item-content">
-                            <h3><a href="{{ route('blog.show', ['slug' => 'professional-packing-services']) }}">The
-                                    Benefits of Professional Packing Services</a></h3>
-                        </div>
-                        <!-- Post Item Content End -->
-
-                        <!-- Post Item Readmore Button Start-->
-                        <div class="post-item-btn">
-                            <a href="{{ route('blog.show', ['slug' => 'professional-packing-services']) }}"
-                                class="readmore-btn">read more</a>
-                        </div>
-                        <!-- Post Item Readmore Button End-->
-                    </div>
-                    <!-- Post Item Body End -->
-                </div>
-                <!-- Post Item End -->
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
