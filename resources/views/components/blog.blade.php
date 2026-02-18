@@ -7,7 +7,7 @@
                 <!-- Section Title Start -->
                 <div class="section-title ">
                     <h3 class="wow fadeInUp">latest blogs</h3>
-                    <h2 class="text-anime-style-2" data-cursor="-opaque">Expert Advice for Stress- <span>Free
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">Expert Advice for Stress-<span>Free
                             Moves</span></h2>
                 </div>
                 <!-- Section Title End -->
