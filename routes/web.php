@@ -6,6 +6,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -46,6 +47,8 @@ Route::get('/team/{slug}', function ($slug) {
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 
 Route::get('/faqs', [FaqController::class, 'index'])->name('faqs');
+
+Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonials');
 
 Route::get('/branches', function () {
     return view('branches');

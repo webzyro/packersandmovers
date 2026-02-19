@@ -33,6 +33,7 @@
                         <li><a href="{{ route('services.index') }}">our services</a></li>
                         <li><a href="{{ route('faqs') }}">FAQs</a></li>
                         <li><a href="{{ route('contact') }}">Contact us</a></li>
+                        <li><a href="{{ route('testimonials') }}">Testimonials</a></li>
                     </ul>
                 </div>
                 <!-- Footer Links End -->
