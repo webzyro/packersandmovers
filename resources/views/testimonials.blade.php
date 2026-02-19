@@ -9,7 +9,8 @@
                         <div class="testimonial-item wow fadeInUp">
                             <div class="author-image">
                                 <figure class="image-anime">
-                                    <img src="{{ Storage::disk('uploads')->url($testimonial->image) }}" alt="">
+                                    <img src="{{ Storage::disk('uploads')->url($testimonial->image) }}"
+                                        alt="{{ $testimonial->id }}">
                                 </figure>
                             </div>
                             <div class="author-content">
