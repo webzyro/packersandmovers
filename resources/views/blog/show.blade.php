@@ -108,6 +108,6 @@
     </div>
 
     @if(!empty($blog->schema_markup))
-        <script type="application/ld+json">{!! json_encode($blog->schema_markup, JSON_HEX_TAG) !!}</script>
+        {!! $blog->schema_markup !!}
     @endif
 </x-layout>
