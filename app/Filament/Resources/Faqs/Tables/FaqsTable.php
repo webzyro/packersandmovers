@@ -17,7 +17,7 @@ class FaqsTable
         return $table
             ->columns([
                 TextColumn::make('question')
-                    ->label('Qestion')
+                    ->label('Question')
                     ->searchable(),
                 IconColumn::make('is_active')
                     ->label('Status')
