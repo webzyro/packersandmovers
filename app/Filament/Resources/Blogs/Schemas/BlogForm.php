@@ -55,9 +55,9 @@ class BlogForm
                             ->label("Meta Keywords")
                             ->required()
                             ->columnSpanFull(),
-                        CodeEditor::make('schema_markup')
+                        Textarea::make('schema_markup')
                             ->label('Schema Markup (JSON-LD)')
-                            ->language(Language::Json)
+                            ->rows(30)
                             ->required()
                             ->columnSpanFull(),
                     ])->columnSpanFull(),
