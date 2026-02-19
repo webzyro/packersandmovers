@@ -73,11 +73,11 @@ class ServiceForm
                             ->label('Meta Keywords')
                             ->required()
                             ->columnSpanFull(),
-                        CodeEditor::make('schema_markup')
+                        Textarea::make('schema_markup')
                             ->label('Schema Markup (JSON-LD)')
-                            ->language(Language::Json)
-                            ->columnSpanFull()
-                            ->helperText('Add valid JSON-LD structured data.'),
+                            ->rows(30)
+                            ->required()
+                            ->columnSpanFull(),
                     ])->columnSpanFull(),
                 Toggle::make('is_active')
                     ->default(true)

@@ -264,8 +264,6 @@
     </div>
 
     @if(!empty($city->schema_markup))
-        <script type="application/ld+json">
-                                                                                                            {!! $city->schema_markup !!}
-                                                                                                        </script>
+        {!! $city->schema_markup !!}
     @endif
 </x-layout>
