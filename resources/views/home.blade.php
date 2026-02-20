@@ -23,5 +23,7 @@
 
     <x-blog :blogs="$blogs" />
 
+    <x-routes />
+
     <x-city />
 </x-layout>
