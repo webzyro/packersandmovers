@@ -55,7 +55,14 @@
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="date" name="when" class="form-control" id="date" required>
+                                        <select name="when" class="form-control form-select" id="movetype" required>
+                                            <option value="" disabled selected>Select moving timeline</option>
+                                            <option value="within_a_week">Within a Week</option>
+                                            <option value="within_14_days">Within 14 Days</option>
+                                            <option value="within_a_month">Within a Month</option>
+                                            <option value="1_3_months">1 – 3 Months</option>
+                                            <option value="flexible">I'm Flexible</option>
+                                        </select>
                                         <div class="help-block with-errors"></div>
                                     </div>
 
