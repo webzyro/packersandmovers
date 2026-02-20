@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\CityPage;
 use App\Models\Route;
 use App\Models\Service;
+use App\Models\Team;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 use View;
@@ -32,6 +33,9 @@ class AppServiceProvider extends ServiceProvider
         });
         View::composer('components.routes', function ($view) {
             $view->with('routes', Route::where('is_active', true)->get(['title', 'slug']));
+        });
+        View::composer('components.team', function ($view) {
+            $view->with('teams', Team::active()->get());
         });
 
         Paginator::useBootstrap();
