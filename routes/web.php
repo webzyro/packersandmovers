@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CityPageController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
@@ -52,6 +53,8 @@ Route::get('/faqs', [FaqController::class, 'index'])->name('faqs');
 Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonials');
 
 Route::get('/routes/{slug}', [RouteController::class, 'show'])->name('route.show');
+
+Route::post('/store-user', [ContactController::class, 'store'])->middleware('throttle:contact-form')->name('contacts.store');
 
 Route::get('/branches', function () {
     return view('branches');

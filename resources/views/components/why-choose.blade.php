@@ -33,7 +33,7 @@
 
                         <!-- Request Quote Form Start -->
                         <div class="request-quote-form">
-                            <form id="requestquoteForm" action="#" method="POST">
+                            <form id="requestquoteForm" action="{{ route('contacts.store') }}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="form-group col-md-6 mb-4">
@@ -55,7 +55,14 @@
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="date" name="date" class="form-control" id="date" required>
+                                        <select name="when" class="form-control form-select" id="movetype" required>
+                                            <option value="" disabled selected>Select moving timeline</option>
+                                            <option value="within_a_week">Within a Week</option>
+                                            <option value="within_14_days">Within 14 Days</option>
+                                            <option value="within_a_month">Within a Month</option>
+                                            <option value="1_3_months">1 – 3 Months</option>
+                                            <option value="flexible">I'm Flexible</option>
+                                        </select>
                                         <div class="help-block with-errors"></div>
                                     </div>
 
@@ -66,7 +73,8 @@
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
-                                        <select name="movetype" class="form-control form-select" id="movetype" required>
+                                        <select name="move_type" class="form-control form-select" id="movetype"
+                                            required>
                                             <option value="" disabled selected>move type</option>
                                             <option value="household">Household Move</option>
                                             <option value="office">Office Move</option>
@@ -78,7 +86,8 @@
                                     </div>
 
                                     <div class="form-group col-md-12 mb-4">
-                                        <select name="services" class="form-control form-select" id="services" required>
+                                        <select name="service_type" class="form-control form-select" id="services"
+                                            required>
                                             <option value="" disabled selected>service type</option>
                                             <option value="residential_moving">Residential Moving</option>
                                             <option value="commercial_moving">Commercial Moving</option>
