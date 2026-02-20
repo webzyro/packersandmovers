@@ -25,15 +25,19 @@
                             <!-- Team Social Icon Start -->
                             <div class="team-social-icon">
                                 <ul>
-                                    <li><a href="{{ $team->instagram ? $team->instagram : '' }}"><i
-                                                class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="{{ $team->facebook ? $team->facebook : '' }}"><i
-                                                class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="{{ $team->twitter ? $team->twitter : '' }}"><i
-                                                class="fa-brands fa-square-x-twitter"></i></a>
-                                    </li>
-                                    <li><a href="{{ $team->linkedin ? $team->linkedin : '' }}"><i
-                                                class="fa-brands fa-linkedin-in"></i></a></li>
+                                    @if($team->instagram)
+                                        <li><a href="{{ $team->instagram }}"><i class="fa-brands fa-instagram"></i></a></li>
+                                    @endif
+                                    @if($team->facebook)
+                                        <li><a href="{{ $team->facebook }}"><i class="fab fa-facebook-f"></i></a></li>
+                                    @endif
+                                    @if($team->twitter)
+                                        <li><a href="{{ $team->twitter }}"><i class="fa-brands fa-square-x-twitter"></i></a>
+                                        </li>
+                                    @endif
+                                    @if($team->linkedin)
+                                        <li><a href="{{ $team->linkedin }}"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    @endif
                                 </ul>
                             </div>
                             <!-- Team Social Icon End -->

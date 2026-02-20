@@ -23,6 +23,8 @@ class TeamForm
                             ->label("Position")
                             ->required(),
                         FileUpload::make('image')
+                            ->disk('uploads')
+                            ->directory('teams')
                             ->label("Image")
                             ->image()
                             ->required(),
