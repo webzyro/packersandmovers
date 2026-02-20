@@ -107,6 +107,8 @@
         </div>
     </div>
 
+    <x-modal />
+
     @if(!empty($blog->schema_markup))
         {!! $blog->schema_markup !!}
     @endif

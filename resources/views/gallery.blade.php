@@ -22,4 +22,6 @@
             <!-- gallery section end -->
         </div>
     </div>
+
+    <x-modal />
 </x-layout>

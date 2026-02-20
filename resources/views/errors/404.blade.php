@@ -23,4 +23,6 @@
             </div>
         </div>
     </div>
+
+    <x-modal />
 </x-layout>

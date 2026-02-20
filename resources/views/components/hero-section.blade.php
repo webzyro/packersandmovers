@@ -78,8 +78,9 @@
 
                                         <!-- Hero Button Start -->
                                         <div class="hero-btn wow fadeInUp" data-wow-delay="0.2s">
-                                            <a href="contact.html" class="btn-default btn-highlighted">Request a
-                                                Quote</a>
+                                            <button type="button" data-bs-toggle="modal" data-bs-target="#getQuoteModal"
+                                                class="btn-default btn-highlighted">Request a
+                                                Quote</button>
                                         </div>
                                         <!-- Hero Button End -->
                                     </div>
@@ -170,8 +171,9 @@
 
                                         <!-- Hero Button Start -->
                                         <div class="hero-btn wow fadeInUp" data-wow-delay="0.2s">
-                                            <a href="contact.html" class="btn-default btn-highlighted">Request a
-                                                Quote</a>
+                                            <button type="button" data-bs-toggle="modal" data-bs-target="#getQuoteModal"
+                                                class="btn-default btn-highlighted">Request a
+                                                Quote</button>
                                         </div>
                                         <!-- Hero Button End -->
                                     </div>

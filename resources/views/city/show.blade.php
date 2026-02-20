@@ -265,6 +265,8 @@
 
     <x-routes />
 
+    <x-modal />
+
     @if(!empty($city->schema_markup))
         {!! $city->schema_markup !!}
     @endif

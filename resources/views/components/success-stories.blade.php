@@ -64,7 +64,7 @@
 
                     <!-- Success Story Button Start -->
                     <div class="success-story-btn wow fadeInUp" data-wow-delay="0.6s">
-                        <a href="contact.html" class="btn-default">contact us</a>
+                        <a href="{{ route('contact') }}" class="btn-default">contact us</a>
                     </div>
                     <!-- Success Story Button End -->
                 </div>

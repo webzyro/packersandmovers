@@ -26,4 +26,6 @@
     <x-routes />
 
     <x-city />
+
+    <x-modal />
 </x-layout>

@@ -281,6 +281,8 @@
 
     <x-routes />
 
+    <x-modal />
+
     @if(!empty($service->schema_markup))
         {!! $service->schema_markup !!}
     @endif

@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-center">
             @foreach ($teams as $team)
                 <div class="col-lg-3 col-md-6">
                     <!-- Team Item Start -->

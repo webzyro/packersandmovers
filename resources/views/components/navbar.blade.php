@@ -36,7 +36,8 @@
 
                     <!-- Header Btn Start -->
                     <div class="header-btn">
-                        <a href="{{ route('contact') }}" class="btn-default btn-highlighted">get started</a>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#getQuoteModal"
+                            class="btn-default btn-highlighted">get started</button>
                     </div>
                     <!-- Header Btn End -->
                 </div>

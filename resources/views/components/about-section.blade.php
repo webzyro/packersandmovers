@@ -47,7 +47,12 @@
 
                     <!-- About Us Button Start -->
                     <div class="about-us-btn wow fadeInUp" data-wow-delay="0.4s">
-                        <a href="{{ route('about') }}" class="btn-default">more about us</a>
+                        @if(request()->is('about'))
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#getQuoteModal"
+                                class="btn-default">Request a Quote</button>
+                        @else
+                            <a href="{{ route('about') }}" class="btn-default">more about us</a>
+                        @endif
                     </div>
                     <!-- About Us Button End -->
                 </div>

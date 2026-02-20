@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-center">
             @foreach ($services as $service)
                 <div class="col-lg-3 col-md-6">
                     <!-- Service Item Start -->

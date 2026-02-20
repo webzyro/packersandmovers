@@ -199,6 +199,8 @@
         </div>
     </div>
 
+    <x-modal />
+
     @if(!empty($route->schema_markup))
         {!! $route->schema_markup !!}
     @endif

@@ -10,4 +10,5 @@
     <x-team />
     <x-testimonial-section />
     <x-faqs-section />
+    <x-modal />
 </x-layout>

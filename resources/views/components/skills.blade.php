@@ -93,7 +93,8 @@
 
                     <!-- Our Skill Button Start -->
                     <div class="our-skill-btn wow fadeInUp" data-wow-delay="0.4s">
-                        <a href="{{ route('contact') }}" class="btn-default">book service now</a>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#getQuoteModal"
+                            class="btn-default">book service now</button>
                     </div>
                     <!-- Our Skill Button End -->
                 </div>
