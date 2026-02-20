@@ -33,7 +33,7 @@
 
                         <!-- Request Quote Form Start -->
                         <div class="request-quote-form">
-                            <form id="requestquoteForm" action="#" method="POST">
+                            <form id="requestquoteForm" action="{{ route('store-user') }}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="form-group col-md-6 mb-4">
@@ -55,7 +55,7 @@
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="date" name="date" class="form-control" id="date" required>
+                                        <input type="date" name="when" class="form-control" id="date" required>
                                         <div class="help-block with-errors"></div>
                                     </div>
 
@@ -66,7 +66,8 @@
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
-                                        <select name="movetype" class="form-control form-select" id="movetype" required>
+                                        <select name="move_type" class="form-control form-select" id="movetype"
+                                            required>
                                             <option value="" disabled selected>move type</option>
                                             <option value="household">Household Move</option>
                                             <option value="office">Office Move</option>
@@ -78,7 +79,8 @@
                                     </div>
 
                                     <div class="form-group col-md-12 mb-4">
-                                        <select name="services" class="form-control form-select" id="services" required>
+                                        <select name="service_type" class="form-control form-select" id="services"
+                                            required>
                                             <option value="" disabled selected>service type</option>
                                             <option value="residential_moving">Residential Moving</option>
                                             <option value="commercial_moving">Commercial Moving</option>

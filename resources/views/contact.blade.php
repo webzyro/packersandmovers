@@ -70,12 +70,12 @@
 
                         <!-- Contact Form Start -->
                         <div class="contact-form">
-                            <form id="contactForm" action="#" method="POST" data-toggle="validator" class="wow fadeInUp"
-                                data-wow-delay="0.2s">
+                            <form id="contactForm" action="{{ route('store-user') }}" method="POST"
+                                data-toggle="validator" class="wow fadeInUp" data-wow-delay="0.2s">
                                 @csrf
                                 <div class="row">
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="fname" class="form-control" id="fname"
+                                        <input type="text" name="name" class="form-control" id="fname"
                                             placeholder="First Name" required>
                                         <i class="fa-regular fa-user"></i>
                                         <div class="help-block with-errors"></div>
@@ -83,7 +83,7 @@
 
                                     <div class="form-group col-md-6 mb-4">
                                         <input type="text" name="lname" class="form-control" id="lname"
-                                            placeholder="Last Name" required>
+                                            placeholder="Last Name">
                                         <i class="fa-regular fa-user"></i>
                                         <div class="help-block with-errors"></div>
                                     </div>

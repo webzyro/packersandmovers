@@ -19,7 +19,7 @@
 
             <!-- Modal Body -->
             <div class="modal-body gq-modal-body">
-                <form id="getQuoteForm" action="#" method="POST" novalidate>
+                <form id="getQuoteForm" action="{{ route('store-user') }}" method="POST" novalidate>
                     @csrf
 
                     <!-- Phone Number -->
@@ -37,14 +37,14 @@
                             <label class="gq-label" for="gq_from">
                                 <i class="fa-solid fa-location-dot"></i> Moving From
                             </label>
-                            <input type="text" id="gq_from" name="from_location" class="gq-input"
-                                placeholder="City or Area" required>
+                            <input type="text" id="gq_from" name="from" class="gq-input" placeholder="City or Area"
+                                required>
                         </div>
                         <div class="gq-form-group">
                             <label class="gq-label" for="gq_to">
                                 <i class="fa-solid fa-location-crosshairs"></i> Moving To
                             </label>
-                            <input type="text" id="gq_to" name="to_location" class="gq-input" placeholder="City or Area"
+                            <input type="text" id="gq_to" name="to" class="gq-input" placeholder="City or Area"
                                 required>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                             <i class="fa-regular fa-calendar-days"></i> When Are You Planning to Move?
                         </label>
                         <div class="gq-select-wrapper">
-                            <select id="gq_timing" name="moving_timing" class="gq-input gq-select" required>
+                            <select id="gq_timing" name="when" class="gq-input gq-select" required>
                                 <option value="" disabled selected>Select moving timeline</option>
                                 <option value="within_a_week">Within a Week</option>
                                 <option value="within_14_days">Within 14 Days</option>
@@ -73,7 +73,7 @@
                             <i class="fa-solid fa-truck-moving"></i> Type of Shifting
                         </label>
                         <div class="gq-select-wrapper">
-                            <select id="gq_shift_type" name="shift_type" class="gq-input gq-select" required>
+                            <select id="gq_shift_type" name="service_type" class="gq-input gq-select" required>
                                 <option value="" disabled selected>Select shifting type</option>
                                 <option value="household">Household Shifting</option>
                                 <option value="office">Office Shifting</option>
