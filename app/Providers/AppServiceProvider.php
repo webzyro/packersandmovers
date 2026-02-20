@@ -6,6 +6,9 @@ use App\Models\CityPage;
 use App\Models\Route;
 use App\Models\Service;
 use App\Models\Team;
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 use View;
@@ -36,6 +39,10 @@ class AppServiceProvider extends ServiceProvider
         });
         View::composer('components.team', function ($view) {
             $view->with('teams', Team::active()->get());
+        });
+
+        RateLimiter::for('contact-form', function (Request $request) {
+            return Limit::perMinute(5)->by($request->ip());
         });
 
         Paginator::useBootstrap();

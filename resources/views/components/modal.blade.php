@@ -19,7 +19,7 @@
 
             <!-- Modal Body -->
             <div class="modal-body gq-modal-body">
-                <form id="getQuoteForm" action="{{ route('store-user') }}" method="POST" novalidate>
+                <form id="getQuoteForm" action="{{ route('contacts.store') }}" method="POST" novalidate>
                     @csrf
 
                     <!-- Phone Number -->

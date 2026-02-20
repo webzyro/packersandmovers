@@ -33,7 +33,7 @@
 
                         <!-- Request Quote Form Start -->
                         <div class="request-quote-form">
-                            <form id="requestquoteForm" action="{{ route('store-user') }}" method="POST">
+                            <form id="requestquoteForm" action="{{ route('contacts.store') }}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="form-group col-md-6 mb-4">

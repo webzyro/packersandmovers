@@ -54,7 +54,7 @@ Route::get('/testimonials', [TestimonialController::class, 'index'])->name('test
 
 Route::get('/routes/{slug}', [RouteController::class, 'show'])->name('route.show');
 
-Route::post('/store-user', [ContactController::class, 'store'])->name('store-user');
+Route::post('/store-user', [ContactController::class, 'store'])->middleware('throttle:contact-form')->name('contacts.store');
 
 Route::get('/branches', function () {
     return view('branches');

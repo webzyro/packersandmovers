@@ -70,7 +70,7 @@
 
                         <!-- Contact Form Start -->
                         <div class="contact-form">
-                            <form id="contactForm" action="{{ route('store-user') }}" method="POST"
+                            <form id="contactForm" action="{{ route('contacts.store') }}" method="POST"
                                 data-toggle="validator" class="wow fadeInUp" data-wow-delay="0.2s">
                                 @csrf
                                 <div class="row">
