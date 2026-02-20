@@ -16,9 +16,10 @@
             </div>
         </div>
     </div>
+
+    <x-routes />
+
     @if (!empty($service->schema_markup))
-        <script type="application/ld+json">
-                        {!! json_encode($service->schema_markup) !!}
-                    </script>
+        {!! $service->schema_markup !!}
     @endif
 </x-layout>

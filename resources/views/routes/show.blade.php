@@ -1,5 +1,5 @@
 <x-layout>
-    <x-breadcrumb title="{{ $service->title }}" />
+    <x-breadcrumb :title="$route->title" />
 
     <div class="page-service-single">
         <div class="container">
@@ -10,13 +10,13 @@
                         <!-- Page Sidebar Category List Start -->
                         <div class="page-sidebar-catagery-list wow fadeInUp">
                             <h3>services category</h3>
-                            <ul>
+                            {{-- <ul>
                                 @foreach ($sidebarServices as $sidebarService)
-                                    <li><a
-                                            href="{{ route('services.show', $sidebarService->slug) }}">{{ $sidebarService->title }}</a>
-                                    </li>
+                                <li><a href="{{ route('services.show', $sidebarService->slug) }}">{{
+                                        $sidebarService->title }}</a>
+                                </li>
                                 @endforeach
-                            </ul>
+                            </ul>--}}
 
                         </div>
                         <!-- Page Sidebar Category List End -->
@@ -25,7 +25,7 @@
                         <div class="sidebar-cta-box wow fadeInUp" data-wow-delay="0.2s">
                             <!-- Sidebar Cta Logo Start -->
                             <div class="sidebar-cta-logo">
-                                <img src="{{ asset('assets/images/logo.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/logo.svg') }}" alt="Company Logo">
                             </div>
                             <!-- Sidebar Cta Logo End -->
 
@@ -40,7 +40,7 @@
                             <!-- Sidebar CTA Button Start -->
                             <div class="sidebar-cta-btn">
                                 <a href="tel:+919546988569"><img src="{{ asset('assets/images/icon-phone.svg') }}"
-                                        alt="">+91 9546988569</a>
+                                        alt="Phone Icon">+91 9546988569</a>
                             </div>
                             <!-- Sidebar CTA Button End -->
                         </div>
@@ -51,19 +51,19 @@
 
                 <div class="col-lg-8">
                     <!-- Service Single Content Start -->
-                    <div class="service-single-contemt">
+                    <div class="service-single-content">
                         <!-- Page Single Image Start -->
                         <div class="page-single-image">
                             <figure class="image-anime reveal">
-                                <img src="{{ $service->image ? Storage::disk('uploads')->url($service->image) : asset('assets/images/placeholder.jpg') }}"
-                                    alt="{{ $service->title }}">
+                                <img src="{{ $route->image ? Storage::disk('uploads')->url($route->image) : asset('assets/images/placeholder.jpg') }}"
+                                    alt="{{ $route->title }}">
                             </figure>
                         </div>
                         <!-- Page Single Image End -->
 
                         <!-- Service Entry Start -->
                         <div class="service-entry">
-                            {!! $service->description !!}
+                            {!! $route->description !!}
 
 
                             <!-- Service Solution Box Start -->
@@ -89,7 +89,7 @@
                                         </div>
                                         <div class="icon-box">
                                             <img src="{{ asset('assets/images/icon-service-solution-step-1.svg') }}"
-                                                alt="">
+                                                alt="Step 1: Personalized Planning">
                                         </div>
                                     </div>
                                     <!-- Service Entry Step Item Endtart -->
@@ -108,7 +108,7 @@
                                         </div>
                                         <div class="icon-box">
                                             <img src="{{ asset('assets/images/icon-service-solution-step-2.svg') }}"
-                                                alt="">
+                                                alt="Step 2: Connecting with Resources">
                                         </div>
                                     </div>
                                     <!-- Service Entry Step Item Endtart -->
@@ -128,7 +128,7 @@
                                         </div>
                                         <div class="icon-box">
                                             <img src="{{ asset('assets/images/icon-service-solution-step-3.svg') }}"
-                                                alt="">
+                                                alt="Step 3: Feedback & Improvement">
                                         </div>
                                     </div>
                                     <!-- Service Entry Step Item Endtart -->
@@ -137,52 +137,6 @@
                             </div>
                             <!-- Service Solution Box End -->
 
-                            <!-- Service Secure Box Start -->
-                            <div class="service-secure-box">
-                                <h3 class="text-anime-style-2">Moving made <span>simple and secure</span></h3>
-
-                                <!-- Service Entry Image Content Start -->
-                                <div class="service-entry-image-content">
-                                    <!-- Service Entry Image Start -->
-                                    <div class="service-entry-image">
-                                        <figure class="image-anime reveal">
-                                            <img src="{{ asset('assets/images/service-entry-image.jpg') }}" alt="">
-                                        </figure>
-                                    </div>
-                                    <!-- Service Entry Image End -->
-
-                                    <!-- Service Entry Content Start -->
-                                    <div class="service-entry-content">
-                                        <!-- Service Entry Content Item Start -->
-                                        <div class="service-entry-content-item wow fadeInUp">
-                                            <h3>Quality packing materials</h3>
-                                            <p>We use premium materials to ensure the safety & security of your
-                                                belongings during the move.</p>
-                                        </div>
-                                        <!-- Service Entry Content Item End -->
-
-                                        <!-- Service Entry Content Item Start -->
-                                        <div class="service-entry-content-item wow fadeInUp" data-wow-delay="0.2s">
-                                            <h3>Expert moving team</h3>
-                                            <p>Our experienced professionals handle every step of moving process with
-                                                precision & care.</p>
-                                        </div>
-                                        <!-- Service Entry Content Item End -->
-
-                                        <!-- Service Entry Content Item Start -->
-                                        <div class="service-entry-content-item wow fadeInUp" data-wow-delay="0.4s">
-                                            <h3>Enhanced relocation experience</h3>
-                                            <p>Our services are designed to make your move smooth, efficient and
-                                                stress-free.</p>
-                                        </div>
-                                        <!-- Service Entry Content Item End -->
-                                    </div>
-                                    <!-- Service Entry Content End -->
-                                </div>
-                                <!-- Service Entry Image Content End -->
-                            </div>
-                            <!-- Service Secure Box End -->
-
                             <!-- Service Entry Item Box Start -->
                             <div class="service-entry-item-box">
                                 <!-- Service Entry Item List Start -->
@@ -190,13 +144,14 @@
                                     <!-- Service Entry Item Start -->
                                     <div class="service-entry-item wow fadeInUp">
                                         <div class="icon-box">
-                                            <img src="{{ asset('assets/images/icon-service-entry-item-1.svg') }}"
-                                                alt="">
+                                            <img src="{{ asset('assets/images/icon-service-entry-item-1.svg') }}" alt=""
+                                                aria-hidden="true">
                                         </div>
                                         <div class="service-entry-item-content">
                                             <h3>Smooth Relocation</h3>
                                             <p>
-                                                Professional planning and execution for a stress-free moving experience.
+                                                Professional planning and execution for a stress-free moving
+                                                experience.
                                             </p>
 
                                         </div>
@@ -206,8 +161,8 @@
                                     <!-- Service Entry Item Start -->
                                     <div class="service-entry-item wow fadeInUp" data-wow-delay="0.2s">
                                         <div class="icon-box">
-                                            <img src="{{ asset('assets/images/icon-service-entry-item-2.svg') }}"
-                                                alt="">
+                                            <img src="{{ asset('assets/images/icon-service-entry-item-2.svg') }}" alt=""
+                                                aria-hidden="true">
                                         </div>
                                         <div class="service-entry-item-content">
                                             <h3>Complete Care & Safety</h3>
@@ -237,41 +192,6 @@
                             <!-- Service Entry Item Box End -->
                         </div>
                         <!-- Service Entry End -->
-
-                        <!-- Page Single FAQs Start -->
-                        <div class="page-single-faqs">
-                            <!-- Section Title Start -->
-                            <div class="section-title">
-                                <h3 class="text-anime-style-2" data-cursor="-opaque">Answers to your <span>moving
-                                        questions</span></h3>
-                            </div>
-                            <!-- Section Title End -->
-
-                            <!-- FAQ Accordion Start -->
-                            <div class="faq-accordion" id="faqaccordion">
-                                <!-- FAQ Item Start -->
-                                @foreach ($service->faqs as $faq)
-                                    <div class="accordion-item wow fadeInUp">
-                                        <h4 class="accordion-header" id="heading{{ $faq->id }}">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#collapse{{ $faq->id }}"
-                                                aria-expanded="false" aria-controls="collapse{{ $faq->id }}">
-                                                {{ $faq->question }}
-                                            </button>
-                                        </h4>
-                                        <div id="collapse{{ $faq->id }}" class="accordion-collapse collapse"
-                                            aria-labelledby="heading{{ $faq->id }}" data-bs-parent="#faqaccordion">
-                                            <div class="accordion-body">
-                                                <p>{{ $faq->answer }}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                                <!-- FAQ Item End -->
-                            </div>
-                            <!-- FAQ Accordion End -->
-                        </div>
-                        <!-- Page Single FAQs End -->
                     </div>
                     <!-- Service Single Content End -->
                 </div>
@@ -279,9 +199,8 @@
         </div>
     </div>
 
-    <x-routes />
-
-    @if(!empty($service->schema_markup))
-        {!! $service->schema_markup !!}
+    @if(!empty($route->schema_markup))
+        {!! $route->schema_markup !!}
     @endif
+
 </x-layout>

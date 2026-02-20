@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\CityPage;
+use App\Models\Route;
 use App\Models\Service;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
@@ -28,6 +29,9 @@ class AppServiceProvider extends ServiceProvider
         });
         View::composer('components.city', function ($view) {
             $view->with('cities', CityPage::where('is_active', true)->get(['title', 'slug']));
+        });
+        View::composer('components.routes', function ($view) {
+            $view->with('routes', Route::where('is_active', true)->get(['title', 'slug']));
         });
 
         Paginator::useBootstrap();
