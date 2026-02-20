@@ -27,13 +27,27 @@
                 <!-- Footer Links Start -->
                 <div class="footer-links">
                     <h3>quick link</h3>
-                    <ul>
-                        <li><a href="{{ route('home') }}">Home</a></li>
-                        <li><a href="{{ route('about') }}">About us</a></li>
-                        <li><a href="{{ route('services.index') }}">our services</a></li>
-                        <li><a href="{{ route('faqs') }}">FAQs</a></li>
-                        <li><a href="{{ route('contact') }}">Contact us</a></li>
-                        <li><a href="{{ route('testimonials') }}">Testimonials</a></li>
+                    <ul class="ps-2">
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-arrow-right icon"></i>
+                            <a href="{{ route('about') }}">About us</a>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-arrow-right icon"></i>
+                            <a href="{{ route('services.index') }}">our services</a>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-arrow-right icon"></i>
+                            <a href="{{ route('faqs') }}">FAQs</a>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-arrow-right icon"></i>
+                            <a href="{{ route('contact') }}">Contact us</a>
+                        </li>
+                        <li class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-arrow-right icon"></i>
+                            <a href="{{ route('testimonials') }}">Testimonials</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- Footer Links End -->
@@ -46,7 +60,7 @@
                     <!-- Footer Contact Item Start -->
                     <div class="footer-contact-item">
                         <div class="icon-box">
-                            <img src="images/icon-location.svg" alt="">
+                            <img src="{{asset('assets/images/icon-location.svg')}}" alt="location-icon">
                         </div>
                         <div class="footer-contact-content">
                             <p>Sorangpur, Near Devi Asthan Mandir, East Ram Krishna Nagar, Patna, Bihar - 800027</p>
@@ -57,11 +71,10 @@
                     <!-- Footer Contact Item Start -->
                     <div class="footer-contact-item">
                         <div class="icon-box">
-                            <img src="images/icon-mail.svg" alt="">
+                            <img src="{{asset('assets/images/icon-mail.svg')}}" alt="mail-icon">
                         </div>
                         <div class="footer-contact-content">
                             <p><a href="mailto:grandpackerspatna@gmail.com">grandpackerspatna@gmail.com</a></p>
-                            <!-- <p><a href="mailto:info@domain.com">info@domain.com</a></p> -->
                         </div>
                     </div>
                     <!-- Footer Contact Item End -->
@@ -69,7 +82,7 @@
                     <!-- Footer Contact Item Start -->
                     <div class="footer-contact-item">
                         <div class="icon-box">
-                            <img src="images/icon-phone.svg" alt="">
+                            <img src="{{ asset('assets/images/icon-phone.svg') }}" alt="phone-icon">
                         </div>
                         <div class="footer-contact-content">
                             <p><a href="tel:+123456789">+91 9546988569</a></p>
@@ -101,9 +114,15 @@
                 <div class="footer-copyright">
                     <!-- Footer Copyright Text Start -->
                     <div class="footer-copyright-text">
-                        <p>Copyright © 2025 All Rights Reserved.</p>
+                        <p>&copy; 2026 All Rights Reserved by Grand Packers and Movers.</p>
                     </div>
                     <!-- Footer Copyright Text End -->
+
+                    <div>
+                        <p class="text-white fw-bold">Developed by <a target="_blank" href="https://www.webzyro.com"
+                                class="icon">Webzyro Technologies</a>
+                        </p>
+                    </div>
 
                     <!-- Footer Social Link Start -->
                     <div class="footer-social-links">

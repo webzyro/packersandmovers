@@ -693,6 +693,10 @@ header.main-header .header-sticky.active{
     padding: 8px 20px 8px 30px;
 }
 
+.icon{
+	color: var(--accent-color);
+}
+
 .slicknav_arrow{
 	font-size: 0 !important;
 }
