@@ -5,6 +5,7 @@ use App\Http\Controllers\CityPageController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RouteController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
@@ -49,6 +50,8 @@ Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('/faqs', [FaqController::class, 'index'])->name('faqs');
 
 Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonials');
+
+Route::get('/routes/{slug}', [RouteController::class, 'show'])->name('route.show');
 
 Route::get('/branches', function () {
     return view('branches');

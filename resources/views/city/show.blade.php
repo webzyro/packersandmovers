@@ -263,6 +263,8 @@
         </div>
     </div>
 
+    <x-routes />
+
     @if(!empty($city->schema_markup))
         {!! $city->schema_markup !!}
     @endif
