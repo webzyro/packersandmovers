@@ -12,7 +12,10 @@ class ContactController extends Controller
         $request->validate([
             'name' => 'nullable|string|min:3',
             'email' => 'nullable|email',
-            'phone' => 'nullable|min:10|max:15',
+            'phone' => [
+                'regex:/^[6-9]\d{9}$/',
+                'nullable',
+            ],
             'from' => 'nullable|string|min:4',
             'to' => 'nullable|string|min:4',
             'when' => 'nullable|string',
@@ -23,6 +26,6 @@ class ContactController extends Controller
 
         Contact::create($request->all());
 
-        return redirect()->back()->with('success', 'Thank you for your message!');
+        return redirect()->route('success');
     }
 }

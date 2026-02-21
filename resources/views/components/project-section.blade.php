@@ -32,12 +32,11 @@
                         </figure>
 
                         <div class="project-btn">
-                            <a href="{{ route('projects.show', ['slug' => 'urban-retreat-relocation']) }}"><img
-                                    src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
+                            <a href="#"><img src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3><a href="{{ route('projects.show', ['slug' => 'urban-retreat-relocation']) }}">Urban Retreat
+                        <h3><a href="#">Urban Retreat
                                 Relocation</a></h3>
                     </div>
                 </div>
@@ -53,12 +52,11 @@
                         </figure>
 
                         <div class="project-btn">
-                            <a href="{{ route('projects.show', ['slug' => 'cityscape-transitions']) }}"><img
-                                    src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
+                            <a href="#"><img src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3><a href="{{ route('projects.show', ['slug' => 'cityscape-transitions']) }}">Cityscape
+                        <h3><a href="#">Cityscape
                                 Transitions</a></h3>
                     </div>
                 </div>
@@ -74,12 +72,11 @@
                         </figure>
 
                         <div class="project-btn">
-                            <a href="{{ route('projects.show', ['slug' => 'luxury-living-moves']) }}"><img
-                                    src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
+                            <a href="#"><img src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3><a href="{{ route('projects.show', ['slug' => 'luxury-living-moves']) }}">Luxury Living
+                        <h3><a href="#">Luxury Living
                                 Moves</a></h3>
                     </div>
                 </div>
@@ -95,12 +92,11 @@
                         </figure>
 
                         <div class="project-btn">
-                            <a href="{{ route('projects.show', ['slug' => 'seamless-office-relocation']) }}"><img
-                                    src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
+                            <a href="#"><img src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3><a href="{{ route('projects.show', ['slug' => 'seamless-office-relocation']) }}">Seamless
+                        <h3><a href="#">Seamless
                                 Office Relocation</a></h3>
                     </div>
                 </div>
@@ -116,12 +112,11 @@
                         </figure>
 
                         <div class="project-btn">
-                            <a href="{{ route('projects.show', ['slug' => 'suburban-dream-shifts']) }}"><img
-                                    src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
+                            <a href="#"><img src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3><a href="{{ route('projects.show', ['slug' => 'suburban-dream-shifts']) }}">Suburban Dream
+                        <h3><a href="#">Suburban Dream
                                 Shifts</a></h3>
                     </div>
                 </div>
@@ -137,12 +132,11 @@
                         </figure>
 
                         <div class="project-btn">
-                            <a href="{{ route('projects.show', ['slug' => 'corporate-move']) }}"><img
-                                    src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
+                            <a href="#"><img src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3><a href="{{ route('projects.show', ['slug' => 'corporate-move']) }}">Corporate Move</a></h3>
+                        <h3><a href="#">Corporate Move</a></h3>
                     </div>
                 </div>
                 <!-- Project Item End -->
@@ -151,7 +145,7 @@
             <div class="col-lg-12">
                 <!-- Section Footer Button Start -->
                 <div class="section-footer-btn wow fadeInUp" data-wow-delay="1.2s">
-                    <a href="{{ route('projects.index') }}" class="btn-default">view all projects</a>
+                    <a href="#" class="btn-default">view all projects</a>
                 </div>
                 <!-- Section Footer Button End -->
             </div>

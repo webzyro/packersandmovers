@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Filament\Notifications\Notification;
-use Filament\Notifications\Actions\Action as NotificationAction;
+use Filament\Actions\Action;
 use App\Models\User;
 
 class Contact extends Model
@@ -23,7 +23,7 @@ class Contact extends Model
                     ->title('New Lead Received')
                     ->body("New lead from {$contact->name} ({$contact->email})")
                     ->actions([
-                        NotificationAction::make('view')
+                        Action::make('view')
                             ->url(rescue(
                                 fn() => route('filament.admin.resources.contacts.view', $contact),
                                 null,

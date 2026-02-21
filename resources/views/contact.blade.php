@@ -70,8 +70,8 @@
 
                         <!-- Contact Form Start -->
                         <div class="contact-form">
-                            <form id="contactForm" action="{{ route('contacts.store') }}" method="POST"
-                                data-toggle="validator" class="wow fadeInUp" data-wow-delay="0.2s">
+                            <form id="" action="{{ route('contacts.store') }}" method="POST" data-toggle="validator"
+                                class="wow fadeInUp" data-wow-delay="0.2s">
                                 @csrf
                                 <div class="row">
                                     <div class="form-group col-md-6 mb-4">
@@ -79,6 +79,9 @@
                                             placeholder="First Name" required>
                                         <i class="fa-regular fa-user"></i>
                                         <div class="help-block with-errors"></div>
+                                        @error('name')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
@@ -86,6 +89,9 @@
                                             placeholder="Last Name">
                                         <i class="fa-regular fa-user"></i>
                                         <div class="help-block with-errors"></div>
+                                        @error('lname')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
@@ -93,6 +99,9 @@
                                             placeholder="Email Address" required>
                                         <i class="fa-regular fa-envelope"></i>
                                         <div class="help-block with-errors"></div>
+                                        @error('email')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
@@ -100,12 +109,18 @@
                                             placeholder="Phone Number" required>
                                         <img src="{{ asset('assets/images/icon-phone-primary.svg') }}" alt="">
                                         <div class="help-block with-errors"></div>
+                                        @error('phone')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group col-md-12 mb-5">
                                         <textarea name="message" class="form-control" id="message" rows="4"
                                             placeholder="Message"></textarea>
                                         <div class="help-block with-errors"></div>
+                                        @error('message')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
 
                                     <div class="col-lg-12">

@@ -27,24 +27,8 @@ Route::get('/services/{slug}', [ServiceController::class, 'show'])->name('servic
 Route::get('/city/{slug}', [CityPageController::class, 'show'])->name('city.show');
 Route::get('/city/{slug}/{service_slug}', [CityPageController::class, 'service'])->name('city.service');
 
-Route::get('/projects', function () {
-    return view('projects');
-})->name('projects.index');
-
-Route::get('/projects/{slug}', function ($slug) {
-    return view('project-single', compact('slug'));
-})->name('projects.show');
-
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
-
-Route::get('/team', function () {
-    return view('team');
-})->name('team.index');
-
-Route::get('/team/{slug}', function ($slug) {
-    return view('team-single', compact('slug'));
-})->name('team.show');
 
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 
@@ -55,6 +39,10 @@ Route::get('/testimonials', [TestimonialController::class, 'index'])->name('test
 Route::get('/routes/{slug}', [RouteController::class, 'show'])->name('route.show');
 
 Route::post('/store-user', [ContactController::class, 'store'])->middleware('throttle:contact-form')->name('contacts.store');
+
+Route::get('/success', function () {
+    return view('success');
+})->name('success');
 
 Route::get('/branches', function () {
     return view('branches');

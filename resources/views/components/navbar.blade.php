@@ -4,7 +4,7 @@
             <div class="container">
                 <!-- Logo Start -->
                 <a class="navbar-brand" href="{{ route('home') }}">
-                    <img src="{{ asset('assets/images/logo.svg') }}" alt="Logo">
+                    <img src="{{ asset('assets/images/grand-packers-and-movers-logo.svg') }}" alt="Logo" width="150">
                 </a>
                 <!-- Logo End -->
 

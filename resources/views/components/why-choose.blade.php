@@ -33,25 +33,34 @@
 
                         <!-- Request Quote Form Start -->
                         <div class="request-quote-form">
-                            <form id="requestquoteForm" action="{{ route('contacts.store') }}" method="POST">
+                            <form id="" action="{{ route('contacts.store') }}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="name"
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Name"
                                             required>
                                         <div class="help-block with-errors"></div>
+                                        @error('name')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
                                         <input type="email" name="email" class="form-control" id="email"
                                             placeholder="Email" required>
                                         <div class="help-block with-errors"></div>
+                                        @error('email')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
                                         <input type="text" name="phone" class="form-control" id="phone"
                                             placeholder="Phone" required>
                                         <div class="help-block with-errors"></div>
+                                        @error('phone')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
@@ -64,12 +73,18 @@
                                             <option value="flexible">I'm Flexible</option>
                                         </select>
                                         <div class="help-block with-errors"></div>
+                                        @error('when')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
                                         <input type="text" name="distance" class="form-control" id="distance"
                                             placeholder="distance" required>
                                         <div class="help-block with-errors"></div>
+                                        @error('distance')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
@@ -83,6 +98,9 @@
                                             <option value="international">International Move</option>
                                         </select>
                                         <div class="help-block with-errors"></div>
+                                        @error('move_type')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group col-md-12 mb-4">
@@ -99,6 +117,9 @@
                                             <option value="moving_assistance">Moving Assistance</option>
                                         </select>
                                         <div class="help-block with-errors"></div>
+                                        @error('service_type')
+                                            <small class="text-danger">{{ $message }}</small>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group col-md-12">
