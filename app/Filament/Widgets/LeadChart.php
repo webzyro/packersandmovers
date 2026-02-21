@@ -18,13 +18,21 @@ class LeadChart extends ChartWidget
             fn($i) => Carbon::today()->subDays($i)
         );
 
+        $counts = Contact::whereBetween('created_at', [
+            Carbon::today()->subDays(6)->startOfDay(),
+            Carbon::today()->endOfDay(),
+        ])
+            ->selectRaw('DATE(created_at) as date, COUNT(*) as count')
+            ->groupBy('date')
+            ->pluck('count', 'date');
+
         return [
             'datasets' => [
                 [
                     'label' => 'Leads',
                     'data' => $days->map(
-                        fn($day) => Contact::whereDate('created_at', $day)->count()
-                    ),
+                        fn($day) => (int) $counts->get($day->format('Y-m-d'), 0)
+                    )->values()->toArray(),
                     'borderColor' => '#3B82F6',           // Blue line
                     'backgroundColor' => 'rgba(59,130,246,0.2)', // Light blue fill
                     'tension' => 0.4,                     // Smooth curve
@@ -35,7 +43,7 @@ class LeadChart extends ChartWidget
             ],
             'labels' => $days->map(
                 fn($day) => $day->format('d M')
-            ),
+            )->values()->toArray(),
         ];
     }
 
