@@ -20,7 +20,7 @@
                                         <!-- Section Title Start -->
                                         <div class="section-title">
                                             <h1 class="text-anime-style-2" data-cursor="-opaque">
-                                                Effortless moving <span>experiences</span>
+                                                IBM approved <span>packers and movers</span>
                                             </h1>
                                             <p class="wow fadeInUp">
                                                 Experts in Hassle-Free Relocation
@@ -34,9 +34,9 @@
                                     <div class="hero-customer-box">
                                         <div class="hero-customer-content wow fadeInUp">
                                             <p>
-                                                Experience a stress-free move with our professional
-                                                services. From careful packing to seamless
-                                                transportation and timely delivery.
+                                                With years of experience, we make moving simple and stress-free. Our
+                                                relocation services are ±signed aroynd
+                                                and leave the move to IBA Approved Packers and Movers in Patna.
                                             </p>
                                         </div>
 
@@ -113,7 +113,7 @@
                                         <!-- Section Title Start -->
                                         <div class="section-title">
                                             <h1 class="text-anime-style-2" data-cursor="-opaque">
-                                                Effortless moving <span>experiences</span>
+                                                100% guranteed <span>satisfaction</span>
                                             </h1>
                                             <p class="wow fadeInUp">
                                                 Experts in Hassle-Free Relocation
@@ -206,7 +206,7 @@
                                         <!-- Section Title Start -->
                                         <div class="section-title">
                                             <h1 class="text-anime-style-2" data-cursor="-opaque">
-                                                Effortless moving <span>experiences</span>
+                                                24/7 support <span>available</span>
                                             </h1>
                                             <p class="wow fadeInUp">
                                                 Experts in Hassle-Free Relocation

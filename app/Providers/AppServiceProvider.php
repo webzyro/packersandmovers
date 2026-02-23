@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\CityPage;
+use App\Models\LatestMove;
 use App\Models\Route;
 use App\Models\Service;
 use App\Models\Team;
@@ -39,6 +40,10 @@ class AppServiceProvider extends ServiceProvider
         });
         View::composer('components.team', function ($view) {
             $view->with('teams', Team::active()->get());
+        });
+
+        View::composer('components.latest-move', function ($view) {
+            $view->with('works', LatestMove::where('is_active', true)->get());
         });
 
         RateLimiter::for('contact-form', function (Request $request) {

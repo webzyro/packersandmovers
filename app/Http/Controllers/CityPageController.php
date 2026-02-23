@@ -13,7 +13,14 @@ class CityPageController extends Controller
         $city = CityPage::where('slug', $slug)->active()->with('faqs')->firstOrFail();
         $sidebarServices = Service::where('is_active', true)->latest()->take(5)->get(['title', 'slug']);
 
-        return view('city.show', compact('city', 'sidebarServices'));
+        $cityName = null;
+
+        if (str_contains($slug, '-in-')) {
+            $cityPart = explode('-in-', $slug)[1]; // patna
+            $cityName = ucwords(str_replace('-', ' ', $cityPart)); // Patna
+        }
+
+        return view('city.show', compact('city', 'sidebarServices', 'cityName'));
     }
 
     public function service(string $slug, string $service_slug)

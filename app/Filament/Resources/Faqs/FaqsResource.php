@@ -7,7 +7,7 @@ use App\Filament\Resources\Faqs\Pages\EditFaqs;
 use App\Filament\Resources\Faqs\Pages\ListFaqs;
 use App\Filament\Resources\Faqs\Schemas\FaqsForm;
 use App\Filament\Resources\Faqs\Tables\FaqsTable;
-use App\Models\Faqs;
+use App\Models\Faq;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
@@ -16,7 +16,7 @@ use Filament\Tables\Table;
 
 class FaqsResource extends Resource
 {
-    protected static ?string $model = Faqs::class;
+    protected static ?string $model = Faq::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::QuestionMarkCircle;
 
