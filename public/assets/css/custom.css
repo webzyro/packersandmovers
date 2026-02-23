@@ -6622,10 +6622,7 @@ header.main-header .header-sticky.active {
         gap: 0;
     }
 }
-
-/************************************/
-/***      Latest Move Section      ***/
-/************************************/
+/* Latest Move Section */
 
 .latest-move {
     padding: 100px 0;
