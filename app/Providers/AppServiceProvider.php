@@ -7,6 +7,7 @@ use App\Models\LatestMove;
 use App\Models\Route;
 use App\Models\Service;
 use App\Models\Team;
+use App\Models\VideoTestimonial;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
@@ -44,6 +45,10 @@ class AppServiceProvider extends ServiceProvider
 
         View::composer('components.latest-move', function ($view) {
             $view->with('works', LatestMove::where('is_active', true)->get());
+        });
+
+        View::composer('components.video-testimonial', function ($view) {
+            $view->with('videoTestimonials', VideoTestimonial::where('is_active', true)->get());
         });
 
         RateLimiter::for('contact-form', function (Request $request) {

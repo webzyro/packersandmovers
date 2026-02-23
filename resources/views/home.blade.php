@@ -25,6 +25,8 @@
 
     <x-blog :blogs="$blogs" />
 
+    <x-video-testimonial />
+
     <x-routes />
 
     <x-city />
