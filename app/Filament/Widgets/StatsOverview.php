@@ -38,7 +38,7 @@ class StatsOverview extends StatsOverviewWidget
             Stat::make('Total Blogs', Blog::count())
                 ->description('Published so far')
                 ->descriptionIcon('heroicon-m-pencil-square')
-                ->descriptionColor('primary')
+                ->descriptionColor('success')
                 ->icon('heroicon-o-document-text')
                 ->color('success')
                 ->chart($blogChart),

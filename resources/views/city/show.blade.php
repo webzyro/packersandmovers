@@ -263,6 +263,8 @@
         </div>
     </div>
 
+    <x-latest-move :cityName="$cityName" />
+
     <x-routes />
 
     <x-modal />

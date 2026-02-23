@@ -16,12 +16,27 @@
 
                         <!-- Why Choose Body Start -->
                         <div class="why-choose-body wow fadeInUp" data-wow-delay="0.2s">
-                            <ul>
-                                <li>Timely service with no hidden fees.</li>
-                                <li>Safe, secure transport for your belongings.</li>
-                                <li>Customized moving plans to fit your needs.</li>
-                                <li>Eco-friendly practices for a sustainable move.</li>
+                            <ul class="row g-4">
+                                <li class="col-lg-6 mt-0 mb-0">IBA Approved</li>
+                                <li class="col-lg-6 mt-0 mb-0">Fully Insured</li>
+                                <li class="col-lg-6 mt-0 mb-0">Experienced Team</li>
+                                <li class="col-lg-6 mt-0 mb-0">24/7 Customer Support</li>
                             </ul>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-4 mt-5">
+                            <div class="why-choose-icon">
+                                <i class="fa-solid fa-shield-heart icon fa-lg" aria-label="IBA Approved"></i>
+                            </div>
+                            <div class="why-choose-icon">
+                                <i class="fa-solid fa-user-shield icon fa-lg" aria-label="Fully Insured"></i>
+                            </div>
+                            <div class="why-choose-icon">
+                                <i class="fa-solid fa-user-group icon fa-lg" aria-label="Experienced Team"></i>
+                            </div>
+                            <div class="why-choose-icon">
+                                <i class="fa-solid fa-hourglass icon fa-lg" aria-label="24/7 Customer Support"></i>
+                            </div>
                         </div>
                         <!-- Why Choose Body End -->
                     </div>

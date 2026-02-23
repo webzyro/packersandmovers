@@ -21,6 +21,8 @@
 
     <x-team />
 
+    <x-latest-move />
+
     <x-blog :blogs="$blogs" />
 
     <x-routes />

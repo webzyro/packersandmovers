@@ -5,7 +5,7 @@
                 <!-- About Us Image Start -->
                 <div class="about-us-image">
                     <figure class="image-anime reveal">
-                        <img src="{{asset('assets/images/about-image.jpg')}}" alt="about-image">
+                        <img src="{{asset('assets/images/banner3.webp')}}" alt="about-image">
                     </figure>
                 </div>
                 <!-- About Us Image End -->
@@ -31,7 +31,10 @@
                     <div class="about-counter-box">
                         <!-- About Counter Item Start -->
                         <div class="about-counter-item">
-                            <h2><span class="counter">92</span>%</h2>
+                            <h2><span class="counter">96</span>%</h2>
+                            @for ($i = 0; $i < 5; $i++)
+                                <i class="fa-solid fa-star icon"></i>
+                            @endfor
                             <p>Our customer satisfaction rate stands at impressive</p>
                         </div>
                         <!-- About Counter Item End -->
@@ -75,7 +78,7 @@
                                     alt="about-owner-signature">
                             </div>
                             <div class="about-owner-info-content">
-                                <h3>Aditya Singh</h3>
+                                <h3>Packers Movers</h3>
                                 <p>CEO & Founder</p>
                             </div>
                         </div>
@@ -85,7 +88,7 @@
                     <!-- About Owner Image Start -->
                     <div class="about-owner-image">
                         <figure class="image-anime reveal">
-                            <img src="{{asset('assets/images/about-owner-image.jpg')}}" alt="about-owner-image">
+                            <img src="{{asset('assets/images/ouroffice.jpg')}}" alt="about-owner-image">
                         </figure>
                     </div>
                     <!-- About Owner Image End -->
