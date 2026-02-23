@@ -26,16 +26,16 @@
 
                         <div class="d-flex align-items-center gap-4 mt-5">
                             <div class="why-choose-icon">
-                                <i class="fa-solid fa-shield-heart icon fa-lg"></i>
+                                <i class="fa-solid fa-shield-heart icon fa-lg" aria-label="IBA Approved"></i>
                             </div>
                             <div class="why-choose-icon">
-                                <i class="fa-solid fa-user-shield icon fa-lg"></i>
+                                <i class="fa-solid fa-user-shield icon fa-lg" aria-label="Fully Insured"></i>
                             </div>
                             <div class="why-choose-icon">
-                                <i class="fa-solid fa-user-group icon fa-lg"></i>
+                                <i class="fa-solid fa-user-group icon fa-lg" aria-label="Experienced Team"></i>
                             </div>
                             <div class="why-choose-icon">
-                                <i class="fa-solid fa-hourglass icon fa-lg"></i>
+                                <i class="fa-solid fa-hourglass icon fa-lg" aria-label="24/7 Customer Support"></i>
                             </div>
                         </div>
                         <!-- Why Choose Body End -->

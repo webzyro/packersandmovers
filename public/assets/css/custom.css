@@ -6420,7 +6420,8 @@ header.main-header .header-sticky.active {
 
 .gq-header-badge {
     display: inline-block;
-    background: rgba(253, 85, 35, 0.18);
+    /* background: rgba(253, 85, 35, 0.18); */
+    background: rgba(228, 24, 32, 0.18);
     color: var(--accent-color);
     font-size: 12px;
     font-weight: 600;
@@ -6429,7 +6430,7 @@ header.main-header .header-sticky.active {
     padding: 4px 12px;
     border-radius: 50px;
     margin-bottom: 10px;
-    border: 1px solid rgba(253, 85, 35, 0.35);
+    border: 1px solid rgba(228, 24, 32, 0.35);
 }
 
 .gq-modal-title {
@@ -6537,7 +6538,7 @@ header.main-header .header-sticky.active {
 .gq-input:focus {
     border-color: var(--accent-color);
     background: var(--white-color);
-    box-shadow: 0 0 0 3px rgba(253, 85, 35, 0.1);
+    box-shadow: 0 0 0 3px rgba(228, 24, 32, 0.1);
 }
 
 /* ---- Select Wrapper ---- */
@@ -6595,7 +6596,7 @@ header.main-header .header-sticky.active {
 
 .gq-submit-btn:hover {
     background: var(--primary-color);
-    box-shadow: 0 8px 24px rgba(253, 85, 35, 0.3);
+    box-shadow: 0 8px 24px rgba(228, 24, 32, 0.3);
 }
 
 .gq-submit-btn:hover i {

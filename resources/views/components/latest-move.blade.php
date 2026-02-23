@@ -33,7 +33,7 @@
                                         <div class="latest-move-image">
                                             <figure class="image-anime">
                                                 <img src="{{ Storage::disk('uploads')->url($work->image) }}"
-                                                    alt="Household Move">
+                                                    alt="{{ $work->title }}">
                                             </figure>
                                             {{-- <span class="latest-move-tag">Household</span> --}}
                                         </div>

@@ -24,7 +24,7 @@ class LatestMoveForm
                     ->image()
                     ->required(),
                 Textarea::make('description')
-                    ->label('Samll Description')
+                    ->label('Small Description')
                     ->required()
                     ->columnSpanFull(),
                 Toggle::make('is_active')

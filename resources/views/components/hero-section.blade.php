@@ -20,7 +20,7 @@
                                         <!-- Section Title Start -->
                                         <div class="section-title">
                                             <h1 class="text-anime-style-2" data-cursor="-opaque">
-                                                IBM approved <span>packers and movers</span>
+                                                IBA approved <span>packers and movers</span>
                                             </h1>
                                             <p class="wow fadeInUp">
                                                 Experts in Hassle-Free Relocation
@@ -35,8 +35,8 @@
                                         <div class="hero-customer-content wow fadeInUp">
                                             <p>
                                                 With years of experience, we make moving simple and stress-free. Our
-                                                relocation services are ±signed aroynd
-                                                and leave the move to IBA Approved Packers and Movers in Patna.
+                                                relocation services are designed around and leave the move to IBA
+                                                Approved Packers and Movers in Patna.
                                             </p>
                                         </div>
 
@@ -113,7 +113,7 @@
                                         <!-- Section Title Start -->
                                         <div class="section-title">
                                             <h1 class="text-anime-style-2" data-cursor="-opaque">
-                                                100% guranteed <span>satisfaction</span>
+                                                100% guaranteed <span>satisfaction</span>
                                             </h1>
                                             <p class="wow fadeInUp">
                                                 Experts in Hassle-Free Relocation
