@@ -19,6 +19,10 @@
 
     <x-routes />
 
+    <x-testimonial-section />
+
+    <x-video-testimonial />
+
     <x-modal />
 
     @if (!empty($service->schema_markup))

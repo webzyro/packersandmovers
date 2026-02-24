@@ -267,6 +267,10 @@
 
     <x-routes />
 
+    <x-testimonial-section />
+
+    <x-video-testimonial />
+
     <x-modal />
 
     @if(!empty($city->schema_markup))

@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Most Trusted Packers and Movers in Patna | Transparent Pricing & Hassle-Free Relocation Services in Patna |
+        Grand Packers & Movers</title>
 
     <!-- Favicon Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
@@ -43,6 +44,8 @@
     <main>
         {{ $slot }}
     </main>
+
+    <x-float-icon />
 
     <!-- Footer -->
     <x-footer />

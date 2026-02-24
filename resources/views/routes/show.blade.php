@@ -199,6 +199,10 @@
         </div>
     </div>
 
+    <x-testimonial-section />
+
+    <x-video-testimonial />
+
     <x-modal />
 
     @if(!empty($route->schema_markup))
