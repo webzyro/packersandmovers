@@ -6,7 +6,7 @@
                 <div class="about-footer">
                     <!-- Footer Logo Start -->
                     <div class="footer-logo">
-                        <img src="{{asset('assets/images/logo.svg')}}" alt="Logo">
+                        <img src="{{asset('assets/images/grand-packers-and-movers.svg')}}" alt="Logo">
                     </div>
                     <!-- Footer Logo End -->
 
@@ -127,9 +127,11 @@
                     <!-- Footer Social Link Start -->
                     <div class="footer-social-links">
                         <ul>
-                            <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a href="https://www.facebook.com/grandpackersandmovers/?rdid=s9SlYmM7sdElEqrl"
+                                    target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/grandpackersandmovers?igsh=eHViZnI4aXIyOXR5"
+                                    target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                         </ul>
                     </div>
                     <!-- Footer Social Link End -->
