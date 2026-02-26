@@ -20,6 +20,10 @@ return new class extends Migration {
             $table->string('image');
             $table->longText('description');
             $table->boolean('is_active')->default(true);
+            $table->string('meta_title');
+            $table->text('meta_description');
+            $table->text('meta_keywords');
+            $table->json('schema_markup');
             $table->timestamps();
         });
     }
