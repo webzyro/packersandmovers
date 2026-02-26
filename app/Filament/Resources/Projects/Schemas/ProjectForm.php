@@ -60,8 +60,8 @@ class ProjectForm
 
                 Section::make('SEO Setting')
                     ->schema([
-                        TextInput::make('title')
-                            ->label('Title')
+                        TextInput::make('meta_title')
+                            ->label('Meta Title')
                             ->required(),
                         Textarea::make('meta_description')
                             ->label('Meta Description')
@@ -69,6 +69,11 @@ class ProjectForm
                         Textarea::make('meta_keywords')
                             ->label('Meta Keywords')
                             ->required(),
+                        Textarea::make('schema_markup')
+                            ->label('Schema Markup (JSON-LD)')
+                            ->rows(30)
+                            ->required()
+                            ->columnSpanFull(),
                     ])->columnSpanFull(),
 
                 Toggle::make('is_active')
