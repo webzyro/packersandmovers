@@ -26,7 +26,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('gallery') }}">Gallery</a></li>
-                            <!-- <li class="nav-item"><a class="nav-link" href="{{ route('branches') }}">Branches</a></li> -->
+                            <li class="nav-item"><a class="nav-link" href="{{ route('branch') }}">Branches</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('blog.index') }}">Blog</a></li>
                             <!-- <li class="nav-item"><a class="nav-link" href="{{ route('clients') }}">Clients</a></li> -->
 
