@@ -44,9 +44,9 @@ Route::get('/success', function () {
     return view('success');
 })->name('success');
 
-Route::get('/branches', function () {
-    return view('branches');
-})->name('branches');
+Route::get('/our-branches', function () {
+    return view('branch');
+})->name('branch');
 
 Route::get('/clients', function () {
     return view('clients');
