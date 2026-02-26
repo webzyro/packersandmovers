@@ -37,7 +37,8 @@ class ProjectForm
                                     ->required(),
                                 TextInput::make('budget')
                                     ->required()
-                                    ->numeric(),
+                                    ->numeric()
+                                    ->minValue(0),
                             ]),
                         Grid::make(2)
                             ->schema([
@@ -46,7 +47,8 @@ class ProjectForm
                                     ->required(),
                                 TextInput::make('duration_days')
                                     ->numeric()
-                                    ->default(null),
+                                    ->default(null)
+                                    ->minValue(0),
                             ]),
                         FileUpload::make('image')
                             ->disk('uploads')

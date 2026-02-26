@@ -26,5 +26,6 @@ class Project extends Model
         'budget' => 'decimal:2',
         'published_date' => 'date',
         'is_active' => 'boolean',
+        'schema_markup' => 'array',
     ];
 }
