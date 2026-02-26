@@ -18,7 +18,8 @@ class Project extends Model
     ];
 
     protected $casts = [
-        'budget' => 'decimal',
+        'budget' => 'decimal:2',
+        'published_date' => 'date',
         'is_active' => 'boolean',
     ];
 }
