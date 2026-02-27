@@ -24,17 +24,18 @@
 
         <div class="row">
             @foreach ($projects as $project)
-                    <div class="col-lg-4 col-md-6">
-                        <!-- Project Item Start -->
-                        <div class="project-item wow fadeInUp">
-                            <div class="project-image">
-                                <figure class="image-anime">
-                                    <img src="{{Storage::disk('uploads')->url($project->image)}}" alt="{{ $project->project_name }}>
-                                    </figure>
+                <div class="col-lg-4 col-md-6">
+                    <!-- Project Item Start -->
+                    <div class="project-item wow fadeInUp">
+                        <div class="project-image">
+                            <figure class="image-anime">
+                                <img src="{{ Storage::disk('uploads')->url($project->image) }}"
+                                    alt="{{ $project->project_name }}">
+                            </figure>
 
-                                    <div class=" project-btn">
-                                    <a href="{{ route('project.show', $project->slug) }}"><img
-                                            src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
+                            <div class="project-btn">
+                                <a href="{{ route('project.show', $project->slug) }}"><img
+                                        src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
                             </div>
                         </div>
                         <div class="project-content">
@@ -46,13 +47,13 @@
             @endforeach
 
 
-        <div class="col-lg-12">
-            <!-- Section Footer Button Start -->
-            <div class="section-footer-btn wow fadeInUp" data-wow-delay="1.2s">
-                <a href="{{ route('project.index') }}" class="btn-default">view all projects</a>
+            <div class="col-lg-12">
+                <!-- Section Footer Button Start -->
+                <div class="section-footer-btn wow fadeInUp" data-wow-delay="1.2s">
+                    <a href="{{ route('project.index') }}" class="btn-default">view all projects</a>
+                </div>
+                <!-- Section Footer Button End -->
             </div>
-            <!-- Section Footer Button End -->
         </div>
     </div>
-</div>
 </div>

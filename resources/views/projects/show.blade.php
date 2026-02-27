@@ -72,7 +72,8 @@
                                     </div>
                                     <div class="project-detail-content">
                                         <h3>Duration</h3>
-                                        <p>{{ $project->duration_days }} day</p>
+                                        <p>{{ $project->duration_days }}
+                                            {{ Str::plural('day', $project->duration_days) }}</p>
                                     </div>
                                 </div>
                                 <!-- Project Detail Item End -->
