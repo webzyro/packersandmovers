@@ -93,13 +93,14 @@
                                 <h3>How can we help?</h3>
                                 <p>Sorangpur, Near Devi Asthan Mandir, East Ram Krishna Nagar,
                                     Patna, Bihar-800027</p>
-                                <p><a href="mailto:info@domainname.com">grandpackerspatna@gmail.com</a></p>
+                                <p><a href="mailto:grandpackerspatna@gmail.com">grandpackerspatna@gmail.com</a></p>
                             </div>
                             <!-- Sidebar CTA Content End -->
 
                             <!-- Sidebar CTA Button Start -->
                             <div class="sidebar-cta-btn">
-                                <a href="tel:+91-9971062018"><img src="images/icon-phone.svg" alt="">+91-9971062018</a>
+                                <a href="tel:+91-9971062018"><img src="{{asset('assets/images/icon-phone.svg')}}"
+                                        alt="icon 6">+91-9971062018</a>
                             </div>
                             <!-- Sidebar CTA Button End -->
                         </div>

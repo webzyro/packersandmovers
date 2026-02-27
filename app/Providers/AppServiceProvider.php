@@ -53,7 +53,11 @@ class AppServiceProvider extends ServiceProvider
         });
 
         View::composer('components.project-section', function ($view) {
-            $view->with('projects', Project::where('is_active', true)->take(6)->get());
+            $view->with('projects', Project::where('is_active', true)
+                ->orderByDesc('published_date')
+                ->orderByDesc('id')
+                ->take(6)
+                ->get());
         });
 
         RateLimiter::for('contact-form', function (Request $request) {
