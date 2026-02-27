@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\CityPage;
 use App\Models\LatestMove;
+use App\Models\Project;
 use App\Models\Route;
 use App\Models\Service;
 use App\Models\Team;
@@ -49,6 +50,10 @@ class AppServiceProvider extends ServiceProvider
 
         View::composer('components.video-testimonial', function ($view) {
             $view->with('videoTestimonials', VideoTestimonial::where('is_active', true)->get());
+        });
+
+        View::composer('components.project-section', function ($view) {
+            $view->with('projects', Project::where('is_active', true)->take(6)->get());
         });
 
         RateLimiter::for('contact-form', function (Request $request) {

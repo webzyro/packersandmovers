@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TestimonialController;
@@ -39,6 +40,9 @@ Route::get('/testimonials', [TestimonialController::class, 'index'])->name('test
 Route::get('/routes/{slug}', [RouteController::class, 'show'])->name('route.show');
 
 Route::post('/store-user', [ContactController::class, 'store'])->middleware('throttle:contact-form')->name('contacts.store');
+
+Route::get('/our-projects', [ProjectController::class, 'index'])->name('project.index');
+Route::get('/our-projects/{slug}', [ProjectController::class, 'show'])->name('project.show');
 
 Route::get('/success', function () {
     return view('success');
