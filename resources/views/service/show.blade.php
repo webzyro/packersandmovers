@@ -32,7 +32,9 @@
                             <!-- Sidebar CTA Content Start -->
                             <div class="sidebar-cta-content">
                                 <h3>How can we help?</h3>
-                                <p>Ram Krishna Nagar,Patna, Bihar(800027)</p>
+                                <p>
+                                    Sorangpur, Near Devi Asthan Mandir, East Ram Krishna Nagar,
+                                    Patna, Bihar-800027</p>
                                 <p><a href="mailto:grandpackerspatna@gmail.com">grandpackerspatna@gmail.com</a></p>
                             </div>
                             <!-- Sidebar CTA Content End -->
@@ -40,7 +42,7 @@
                             <!-- Sidebar CTA Button Start -->
                             <div class="sidebar-cta-btn">
                                 <a href="tel:+919546988569"><img src="{{ asset('assets/images/icon-phone.svg') }}"
-                                        alt="">+91 9546988569</a>
+                                        alt="">+91-9546988569</a>
                             </div>
                             <!-- Sidebar CTA Button End -->
                         </div>

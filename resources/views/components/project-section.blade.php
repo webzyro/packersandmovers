@@ -23,129 +23,34 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <!-- Project Item Start -->
-                <div class="project-item wow fadeInUp">
-                    <div class="project-image">
-                        <figure class="image-anime">
-                            <img src="{{asset('assets/images/project-1.jpg')}}" alt="project-1">
-                        </figure>
+            @foreach ($projects as $project)
+                <div class="col-lg-4 col-md-6">
+                    <!-- Project Item Start -->
+                    <div class="project-item wow fadeInUp">
+                        <div class="project-image">
+                            <figure class="image-anime">
+                                <img src="{{ Storage::disk('uploads')->url($project->image) }}"
+                                    alt="{{ $project->project_name }}">
+                            </figure>
 
-                        <div class="project-btn">
-                            <a href="#"><img src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
+                            <div class="project-btn">
+                                <a href="{{ route('project.show', $project->slug) }}"><img
+                                        src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3><a href="{{ route('project.show', $project->slug) }}">{{ $project->project_name }}</a></h3>
                         </div>
                     </div>
-                    <div class="project-content">
-                        <h3><a href="#">Urban Retreat
-                                Relocation</a></h3>
-                    </div>
+                    <!-- Project Item End -->
                 </div>
-                <!-- Project Item End -->
-            </div>
+            @endforeach
 
-            <div class="col-lg-4 col-md-6">
-                <!-- Project Item Start -->
-                <div class="project-item wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="project-image">
-                        <figure class="image-anime">
-                            <img src="{{asset('assets/images/project-2.jpg')}}" alt="project-2">
-                        </figure>
-
-                        <div class="project-btn">
-                            <a href="#"><img src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3><a href="#">Cityscape
-                                Transitions</a></h3>
-                    </div>
-                </div>
-                <!-- Project Item End -->
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!-- Project Item Start -->
-                <div class="project-item wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="project-image">
-                        <figure class="image-anime">
-                            <img src="{{asset('assets/images/project-3.jpg')}}" alt="project-3">
-                        </figure>
-
-                        <div class="project-btn">
-                            <a href="#"><img src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3><a href="#">Luxury Living
-                                Moves</a></h3>
-                    </div>
-                </div>
-                <!-- Project Item End -->
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!-- Project Item Start -->
-                <div class="project-item wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="project-image">
-                        <figure class="image-anime">
-                            <img src="{{asset('assets/images/project-4.jpg')}}" alt="project-4">
-                        </figure>
-
-                        <div class="project-btn">
-                            <a href="#"><img src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3><a href="#">Seamless
-                                Office Relocation</a></h3>
-                    </div>
-                </div>
-                <!-- Project Item End -->
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!-- Project Item Start -->
-                <div class="project-item wow fadeInUp" data-wow-delay="0.8s">
-                    <div class="project-image">
-                        <figure class="image-anime">
-                            <img src="{{asset('assets/images/project-5.jpg')}}" alt="project-5">
-                        </figure>
-
-                        <div class="project-btn">
-                            <a href="#"><img src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3><a href="#">Suburban Dream
-                                Shifts</a></h3>
-                    </div>
-                </div>
-                <!-- Project Item End -->
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <!-- Project Item Start -->
-                <div class="project-item wow fadeInUp" data-wow-delay="1s">
-                    <div class="project-image">
-                        <figure class="image-anime">
-                            <img src="{{asset('assets/images/project-6.jpg')}}" alt="project-6">
-                        </figure>
-
-                        <div class="project-btn">
-                            <a href="#"><img src="{{asset('assets/images/arrow-white.svg')}}" alt="arrow-white"></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3><a href="#">Corporate Move</a></h3>
-                    </div>
-                </div>
-                <!-- Project Item End -->
-            </div>
 
             <div class="col-lg-12">
                 <!-- Section Footer Button Start -->
                 <div class="section-footer-btn wow fadeInUp" data-wow-delay="1.2s">
-                    <a href="#" class="btn-default">view all projects</a>
+                    <a href="{{ route('project.index') }}" class="btn-default">view all projects</a>
                 </div>
                 <!-- Section Footer Button End -->
             </div>
