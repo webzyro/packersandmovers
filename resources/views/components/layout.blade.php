@@ -1,3 +1,10 @@
+@props([
+    'title' => 'Most Trusted Packers and Movers in Patna | Transparent Pricing & Hassle-Free Relocation Services in Patna |
+        Grand Packers & Movers',
+    'meta_desc' => 'Looking for reliable packers and movers in Patna? We offer safe, affordable, and professional house shifting, office relocation, vehicle transportation, and storage services with timely delivery and complete safety.',
+    'meta_keywords' => 'packers and movers in Patna, best movers in Patna, house shifting Patna, office relocation Patna, bike transportation Patna, relocation services Patna',
+])
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -5,11 +12,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Most Trusted Packers and Movers in Patna | Transparent Pricing & Hassle-Free Relocation Services in Patna |
-        Grand Packers & Movers</title>
+    <title>{{ $title ?? config('app.name', 'Shree Shivay') }}</title>
+    <meta name="description" content="{{ $meta_desc }}">
+    <meta name="keywords" content="{{ $meta_keywords }}">
+
+    <link rel="canonical" href="{{ url()->current() }}">
 
     <!-- Favicon Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon/favicon.ico') }}">
     <!-- Google Fonts Css-->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>

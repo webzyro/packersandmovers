@@ -1,4 +1,6 @@
-<x-layout>
+<x-layout title="Our Projects | Successful Packers and Movers Work in Patna"
+    meta_desc="Explore our completed house shifting, office relocation, and transportation projects in Patna. See how we deliver safe, timely, and hassle-free moving solutions."
+    meta_keywords="packers and movers projects Patna, completed relocation projects, house shifting work Patna, office moving projects, successful relocation services">
     <x-breadcrumb title="Project" />
 
     <div class="page-projects">

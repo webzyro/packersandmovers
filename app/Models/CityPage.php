@@ -10,6 +10,7 @@ class CityPage extends Model
     protected $fillable = [
         'title',
         'slug',
+        'about_desc',
         'description',
         'image',
         'meta_title',

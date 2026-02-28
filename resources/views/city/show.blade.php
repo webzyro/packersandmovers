@@ -1,59 +1,88 @@
-<x-layout>
-    <x-breadcrumb title="{{ $city->title }}" />
+<x-layout :title="$city->meta_title" :meta_desc="$city->meta_description" :meta_keywords="$city->meta_keywords">
+
+    <div class="hero dark-section parallaxie">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-lg-12">
+                    <!-- Hero Content Box Start -->
+                    <div class="hero-content-box">
+                        <!-- Hero Content Start -->
+                        <div class="hero-content">
+                            <!-- Section Title Start -->
+                            <div class="section-title">
+                                <h1 class="text-anime-style-2" data-cursor="-opaque">Effortless moving
+                                    <span>experiences</span>
+                                </h1>
+                                <p class="wow fadeInUp">Experts in Hassle-Free Relocation</p>
+                            </div>
+                            <!-- Section Title End -->
+                        </div>
+                        <!-- Hero Content Start -->
+
+                        <!-- Hero Customer Box Start -->
+                        <div class="hero-customer-box">
+                            <div class="hero-customer-content wow fadeInUp">
+                                <p>Experience a stress-free move with our professional services. From careful packing to
+                                    seamless transportation and timely delivery.</p>
+                            </div>
+
+                            <!-- Satisfy Customer Box Start -->
+                            <div class="satisfy-customer-box">
+                                <!-- Satisfy Customer Images Start -->
+                                <div class="satisfy-customer-images">
+                                    <div class="satisfy-customer-image">
+                                        <figure class="image-anime reveal">
+                                            <img src="{{asset('assets/images/satisfy-customer-img-1.jpg')}}"
+                                                alt="first-review">
+                                        </figure>
+                                    </div>
+                                    <div class="satisfy-customer-image">
+                                        <figure class="image-anime reveal">
+                                            <img src="{{asset('assets/images/satisfy-customer-img-2.jpg')}}" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="satisfy-customer-image">
+                                        <figure class="image-anime reveal">
+                                            <img src="{{asset('assets/images/satisfy-customer-img-3.jpg')}}" alt="">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <!-- Satisfy Customer Images End -->
+
+                                <!-- Satisfy Customer Content Start -->
+                                <div class="satisfy-customer-content">
+                                    <h3>Customer Satisfied</h3>
+                                    <p><span class="counter">4.8</span> (15K Reviews)</p>
+                                </div>
+                                <!-- Satisfy Customer Content End -->
+                            </div>
+                            <!-- Satisfy Customer Box End -->
+
+                            <!-- Hero Button Start -->
+                            <div class="hero-btn wow fadeInUp" data-wow-delay="0.2s">
+                                <button type="button" data-bs-toggle="modal" data-bs-target="#getQuoteModal"
+                                    class="btn-default btn-highlighted">Request a
+                                    Quote</button>
+                            </div>
+                            <!-- Hero Button End -->
+                        </div>
+                        <!-- Hero Customer Box End -->
+                    </div>
+                    <!-- Hero Content Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="page-service-single">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <!-- Page Single Sidebar Start -->
-                    <div class="page-single-sidebar">
-                        <!-- Page Sidebar Category List Start -->
-                        <div class="page-sidebar-catagery-list wow fadeInUp">
-                            <h3>services category</h3>
-                            <ul>
-                                @foreach ($sidebarServices as $sidebarService)
-                                    <li><a
-                                            href="{{ route('services.show', $sidebarService->slug) }}">{{ $sidebarService->title }}</a>
-                                    </li>
-                                @endforeach
-                            </ul>
-
-                        </div>
-                        <!-- Page Sidebar Category List End -->
-
-                        <!-- Sidebar CTA Box Start -->
-                        <div class="sidebar-cta-box wow fadeInUp" data-wow-delay="0.2s">
-                            <!-- Sidebar Cta Logo Start -->
-                            <div class="sidebar-cta-logo">
-                                <img src="{{ asset('assets/images/logo.svg') }}" alt="Company Logo">
-                            </div>
-                            <!-- Sidebar Cta Logo End -->
-
-                            <!-- Sidebar CTA Content Start -->
-                            <div class="sidebar-cta-content">
-                                <h3>How can we help?</h3>
-                                <p>
-                                    Sorangpur, Near Devi Asthan Mandir, East Ram Krishna Nagar,
-                                    Patna, Bihar-800027</p>
-                                <p><a href="mailto:grandpackerspatna@gmail.com">grandpackerspatna@gmail.com</a></p>
-                            </div>
-                            <!-- Sidebar CTA Content End -->
-
-                            <!-- Sidebar CTA Button Start -->
-                            <div class="sidebar-cta-btn">
-                                <a href="tel:+91-9971062018"><img src="{{ asset('assets/images/icon-phone.svg') }}"
-                                        alt="Phone Icon">+91-9971062018</a>
-                            </div>
-                            <!-- Sidebar CTA Button End -->
-                        </div>
-                        <!-- Sidebar CTA Box End -->
+                <h3 class="text-anime-style-1 mb-3 text-center">{{ $city->title }}</h3>
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6">
+                        {!! $city->about_desc !!}
                     </div>
-                    <!-- Page Single Sidebar End -->
-                </div>
-
-                <div class="col-lg-8">
-                    <!-- Service Single Content Start -->
-                    <div class="service-single-content">
+                    <div class="col-md-6">
                         <!-- Page Single Image Start -->
                         <div class="page-single-image">
                             <figure class="image-anime reveal">
@@ -62,7 +91,12 @@
                             </figure>
                         </div>
                         <!-- Page Single Image End -->
+                    </div>
+                </div>
 
+                <div class="col-lg-12">
+                    <!-- Service Single Content Start -->
+                    <div class="service-single-content">
                         <!-- Service Entry Start -->
                         <div class="service-entry">
                             {!! $city->description !!}
@@ -73,6 +107,8 @@
                                 <!-- Service Entry Step List Start -->
                                 <div class="service-solution-steps">
                                     <!-- Service Entry Step Item Start -->
+                                    <h3 class="text-anime-style-2 mb-3">Moving made <span>simple and secure</span>with
+                                        ease</h3>
                                     <div class="service-solution-step-item wow fadeInUp" data-wow-delay="0.2s">
                                         <div class="service-solution-step-box">
                                             <div class="service-solution-step-no">
@@ -141,12 +177,14 @@
 
                             <!-- Service Secure Box Start -->
                             <div class="service-secure-box">
-                                <h3 class="text-anime-style-2">Moving made <span>simple and secure</span></h3>
+                                <h3 class="text-anime-style-2">Moving made <span>simple and secure
+                                    </span>{{ $cityName }}
+                                </h3>
 
                                 <!-- Services Start -->
                                 <div class="row g-4 mt-3">
                                     @foreach ($city->services->where('is_active', true) as $service)
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="rounded-4 overflow-hidden shadow-lg">
                                                 <div class="service-secure-box-image">
                                                     <img src="{{ $service->image ? Storage::disk('uploads')->url($service->image) : asset('assets/images/placeholder.jpg') }}"
@@ -264,6 +302,10 @@
             </div>
         </div>
     </div>
+
+    <x-why-choose />
+
+    <x-work-process />
 
     <x-latest-move :cityName="$cityName" />
 

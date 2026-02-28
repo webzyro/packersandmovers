@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :title="$route->meta_title" :meta_desc="$route->meta_description" :meta_keywords="$route->meta_keywords">
     <x-breadcrumb :title="$route->title" />
 
     <div class="page-service-single">

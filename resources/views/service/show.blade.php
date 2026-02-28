@@ -1,4 +1,5 @@
-<x-layout>
+<x-layout :title="$service->meta_title" :meta_desc="$service->meta_description"
+    :meta_keywords="$service->meta_keywords">
     <x-breadcrumb title="{{ $service->title }}" />
 
     <div class="page-service-single">
@@ -25,7 +26,7 @@
                         <div class="sidebar-cta-box wow fadeInUp" data-wow-delay="0.2s">
                             <!-- Sidebar Cta Logo Start -->
                             <div class="sidebar-cta-logo">
-                                <img src="{{ asset('assets/images/logo.svg') }}" alt="">
+                                <img src="{{ asset('assets/images/grand-packers-and-movers.svg') }}" alt="logo">
                             </div>
                             <!-- Sidebar Cta Logo End -->
 

@@ -32,6 +32,9 @@ class CityPageForm
                                     ->unique(ignoreRecord: true)
                                     ->required(),
                             ]),
+                        RichEditor::make('about_desc')
+                            ->label('About Description')
+                            ->required(),
                         RichEditor::make('description')
                             ->label('Description')
                             ->required()

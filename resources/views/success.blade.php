@@ -1,4 +1,6 @@
-<x-layout>
+<x-layout title="Thank You for Your Booking | We Will Contact You Soon"
+    meta_desc="Thank you for submitting your booking request. Our team will review your details and contact you shortly to confirm your relocation service."
+    meta_keywords="booking confirmation, relocation booking submitted, packers and movers confirmation, thank you page">
     <x-breadcrumb title="Booking success" />
     <style>
         .success-page-container {

@@ -1,4 +1,6 @@
-<x-layout>
+<x-layout title="Contact Us | Packers and Movers in Patna"
+    meta_desc="Get in touch with our expert packers and movers team in Patna for safe and affordable relocation services. Call us today for a free quote."
+    meta_keywords="contact packers and movers Patna, moving company contact Patna, relocation quote Patna">
     <x-breadcrumb title="Contact us" />
 
     <section class="page-contact-us">

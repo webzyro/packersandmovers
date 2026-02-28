@@ -1,4 +1,6 @@
-<x-layout>
+<x-layout title="Gallery | Our Moving Projects & Relocation Work"
+    meta_desc="View our successful house shifting, office relocation, and transportation projects in Patna. See how we ensure safe and secure moving services."
+    meta_keywords="moving gallery Patna, relocation projects Patna, packers and movers work photos">
     <x-breadcrumb title="Image gallery" />
 
     <div class="page-gallery">

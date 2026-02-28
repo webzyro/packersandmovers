@@ -1,4 +1,6 @@
-<x-layout>
+<x-layout title="Customer Reviews | Packers and Movers in Patna"
+    meta_desc="Read genuine customer reviews and testimonials about our trusted packers and movers services in Patna. See why clients choose us for safe relocation."
+    meta_keywords="packers and movers reviews Patna, moving company testimonials, relocation customer feedback">
     <x-breadcrumb title="Faqs" />
     <section class="py-5">
         <div class="container">

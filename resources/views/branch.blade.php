@@ -1,4 +1,6 @@
-<x-layout>
+<x-layout title="Our Branches | Packers and Movers Across India"
+    meta_desc="Explore our branch locations offering reliable and professional packers and movers services across multiple cities with safe and timely relocation support."
+    meta_keywords="packers and movers branches, movers across India, relocation services cities">
     <x-breadcrumb title="Our Branches" />
 
     <section class="our-branches py-5">

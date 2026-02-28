@@ -1,4 +1,5 @@
-<x-layout>
+<x-layout :title="$project->meta_title" :meta_desc="$project->meta_description"
+    :meta_keywords="$project->meta_keywords">
     <x-breadcrumb :title="$project->project_name" />
 
     <div class="page-project-single">
@@ -73,7 +74,8 @@
                                     <div class="project-detail-content">
                                         <h3>Duration</h3>
                                         <p>{{ $project->duration_days }}
-                                            {{ Str::plural('day', $project->duration_days) }}</p>
+                                            {{ Str::plural('day', $project->duration_days) }}
+                                        </p>
                                     </div>
                                 </div>
                                 <!-- Project Detail Item End -->

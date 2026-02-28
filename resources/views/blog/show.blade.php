@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :title="$blog->meta_title" :meta_desc="$blog->meta_description" :meta_keywords="$blog->meta_keywords">
     <x-breadcrumb :title="$blog->title" />
 
     <div class="page-single-post">

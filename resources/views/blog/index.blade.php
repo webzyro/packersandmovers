@@ -1,4 +1,6 @@
-<x-layout>
+<x-layout title="Relocation Tips & Moving Guides | Packers and Movers Blog"
+    meta_desc="Read expert tips, relocation guides, and moving advice from professional packers and movers in Patna to make your shifting smooth and stress-free."
+    meta_keywords="moving tips, relocation blog, house shifting tips, packing guide, moving advice Patna">
     <x-breadcrumb title="Our blog" />
 
     <div class="page-blog">

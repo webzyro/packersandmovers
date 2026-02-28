@@ -1,4 +1,6 @@
-<x-layout>
+<x-layout title="Our Services | Packers and Movers Services in Patna"
+    meta_desc="Explore our complete range of relocation services including home shifting, office relocation, vehicle transport, packing & unpacking, and storage solutions in Patna."
+    meta_keywords="moving services Patna, home shifting services Patna, office moving Patna, packing and moving services, vehicle transport Patna">
     <x-breadcrumb title="Our services" />
 
     <div class="page-services">
